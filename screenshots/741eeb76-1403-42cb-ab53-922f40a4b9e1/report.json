@@ -1,0 +1,239 @@
+{
+  "jobId": "741eeb76-1403-42cb-ab53-922f40a4b9e1",
+  "targetUrl": "https://www.geeksforgeeks.org/",
+  "scannedAt": "2026-03-27T17:33:39.240Z",
+  "totalPages": 20,
+  "scanDurationMs": 313035,
+  "summary": {
+    "totalBugs": 2,
+    "brokenLinks": 2,
+    "uiIssues": 0,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 92,
+    "severityCounts": {
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "newIssues": 0,
+    "fixedIssues": 0,
+    "repeatedIssues": 2
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://www.geeksforgeeks.org",
+      "linkUrl": "https://twitter.com/geeksforgeeks",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 403 for \"https://twitter.com/geeksforgeeks\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 403 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "linkUrl": "https://www.geeksforgeeks.org/tag/machine-learning/",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://www.geeksforgeeks.org/tag/machine-learning/\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "repeated"
+    }
+  ],
+  "uiIssues": [],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://www.geeksforgeeks.org",
+      "title": "GeeksforGeeks | Your All-in-One Learning Portal",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_0_https___www_geeksforgeeks_org.png",
+      "loadTimeMs": 2577,
+      "linksFound": 89,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms",
+      "title": "DSA Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_1_https___www_geeksforgeeks_org_dsa_dsa_tutorial_learn_data_structures_and_algorit.png",
+      "loadTimeMs": 13929,
+      "linksFound": 694,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/explore",
+      "title": "Practice | GeeksforGeeks | A computer science portal for geeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_2_https___www_geeksforgeeks_org_explore.png",
+      "loadTimeMs": 11197,
+      "linksFound": 17,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/c/c-programming-language",
+      "title": "C Programming Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_3_https___www_geeksforgeeks_org_c_c_programming_language.png",
+      "loadTimeMs": 14101,
+      "linksFound": 173,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/cpp/c-plus-plus",
+      "title": "C++ Programming Language - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_4_https___www_geeksforgeeks_org_cpp_c_plus_plus.png",
+      "loadTimeMs": 17073,
+      "linksFound": 179,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/java/java",
+      "title": "Java Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_5_https___www_geeksforgeeks_org_java_java.png",
+      "loadTimeMs": 16934,
+      "linksFound": 295,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial",
+      "title": "Python Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_6_https___www_geeksforgeeks_org_python_python_programming_language_tutorial.png",
+      "loadTimeMs": 16936,
+      "linksFound": 234,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/javascript/javascript-tutorial",
+      "title": "JavaScript Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_7_https___www_geeksforgeeks_org_javascript_javascript_tutorial.png",
+      "loadTimeMs": 16885,
+      "linksFound": 279,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners",
+      "title": "Data Science Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_8_https___www_geeksforgeeks_org_data_science_data_science_for_beginners.png",
+      "loadTimeMs": 19566,
+      "linksFound": 236,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "title": "Machine Learning Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_9_https___www_geeksforgeeks_org_machine_learning_machine_learning.png",
+      "loadTimeMs": 19628,
+      "linksFound": 223,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses",
+      "title": "Courses GeeksforGeeks | Interactive LIVE and Self-Paced Courses",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_10_https___www_geeksforgeeks_org_courses.png",
+      "loadTimeMs": 11240,
+      "linksFound": 89,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/dsa-self-paced",
+      "title": "Data Structures and Algorithms - Self Paced",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_11_https___www_geeksforgeeks_org_courses_dsa_self_paced.png",
+      "loadTimeMs": 12373,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/data-science-live",
+      "title": "Data Science Project Based Learning",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_12_https___www_geeksforgeeks_org_courses_data_science_live.png",
+      "loadTimeMs": 14270,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/mastering-system-design-low-level-to-high-level-solutions",
+      "title": "System Design: Low-Level to High-Level - Self Paced",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_13_https___www_geeksforgeeks_org_courses_mastering_system_design_low_level_to_high_.png",
+      "loadTimeMs": 12829,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/connect/home",
+      "title": "Connect-GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_14_https___www_geeksforgeeks_org_connect_home.png",
+      "loadTimeMs": 12325,
+      "linksFound": 963,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/interviewe-101-data-structures-algorithm-system-design",
+      "title": "Tech Interview 101 - DSA and System Design",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_15_https___www_geeksforgeeks_org_courses_interviewe_101_data_structures_algorithm_s.png",
+      "loadTimeMs": 14183,
+      "linksFound": 52,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/Java-backend-live",
+      "title": "Java Backend Development with AI - Live",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_16_https___www_geeksforgeeks_org_courses_Java_backend_live.png",
+      "loadTimeMs": 18896,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/generative-ai-training-program",
+      "title": "Generative AI Training Program - Live",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_17_https___www_geeksforgeeks_org_courses_generative_ai_training_program.png",
+      "loadTimeMs": 16611,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/devops-live",
+      "title": "DevOps Engineering with AI : Planning to Production",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_18_https___www_geeksforgeeks_org_courses_devops_live.png",
+      "loadTimeMs": 17142,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/cpp-programming-basic-to-advanced",
+      "title": "C++ Programming - Self Paced",
+      "statusCode": 200,
+      "screenshotFile": "741eeb76-1403-42cb-ab53-922f40a4b9e1_19_https___www_geeksforgeeks_org_courses_cpp_programming_basic_to_advanced.png",
+      "loadTimeMs": 26098,
+      "linksFound": 54,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ],
+  "previousJobId": "4dffc6cf-3105-4c1a-9344-75509a1a433f"
+}

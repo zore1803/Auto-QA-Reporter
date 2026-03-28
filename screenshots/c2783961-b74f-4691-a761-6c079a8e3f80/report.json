@@ -1,0 +1,62 @@
+{
+  "jobId": "c2783961-b74f-4691-a761-6c079a8e3f80",
+  "targetUrl": "https://example.com/",
+  "scannedAt": "2026-03-26T13:51:37.127Z",
+  "totalPages": 1,
+  "scanDurationMs": 5389,
+  "summary": {
+    "totalBugs": 1,
+    "brokenLinks": 0,
+    "uiIssues": 1,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 99,
+    "severityCounts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "newIssues": 0,
+    "fixedIssues": 0,
+    "repeatedIssues": 1
+  },
+  "brokenLinks": [],
+  "uiIssues": [
+    {
+      "page": "https://example.com",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65,
+      "issueStatus": "repeated"
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://example.com",
+      "title": "Example Domain",
+      "statusCode": 200,
+      "screenshotFile": "c2783961-b74f-4691-a761-6c079a8e3f80_0_https___example_com.png",
+      "loadTimeMs": 564,
+      "linksFound": 1,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "previousJobId": "8853f0dc-9ece-4afa-864d-8d3d2dff1566"
+}

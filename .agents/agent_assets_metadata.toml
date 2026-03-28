@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "WpvtzagmkQi-4Lyb8JJaU"
+uri = "file://downloads/qa-annotated-screenshot.jpg"
+type = "image"
+title = "QA Inspector — Annotated Screenshot (3 issues marked)"
+
+[[outputs]]
+id = "hZGwYdEathQlEeGP68TMw"
+uri = "file://downloads/qa-inspector-project.tar.gz"
+type = "unspecified"
+title = "QA Inspector — Full Project Archive (.tar.gz)"

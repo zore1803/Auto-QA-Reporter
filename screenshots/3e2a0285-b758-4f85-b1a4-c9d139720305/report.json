@@ -1,0 +1,1201 @@
+{
+  "jobId": "3e2a0285-b758-4f85-b1a4-c9d139720305",
+  "targetUrl": "https://www.geeksforgeeks.org/",
+  "scannedAt": "2026-03-21T18:09:25.737Z",
+  "totalPages": 50,
+  "scanDurationMs": 152313,
+  "summary": {
+    "totalBugs": 82,
+    "brokenLinks": 3,
+    "uiIssues": 79,
+    "formIssues": 0,
+    "healthScore": 0,
+    "severityCounts": {
+      "high": 34,
+      "medium": 48,
+      "low": 0
+    }
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://www.geeksforgeeks.org",
+      "linkUrl": "https://www.instagram.com/geeks_for_geeks/",
+      "statusCode": 429,
+      "statusType": "Client Error",
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://www.geeksforgeeks.org",
+      "linkUrl": "https://twitter.com/geeksforgeeks",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "linkUrl": "https://www.geeksforgeeks.org/tag/machine-learning/",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://www.geeksforgeeks.org",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #41 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(41)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #47 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(47)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #48 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(48)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #2 (type: text) has no associated label",
+      "selector": "input:nth-of-type(2)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: a and button",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image #8 is missing alt text (accessibility issue)",
+      "selector": "img[src=\"https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-st\"]",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #106 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(106)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #112 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(112)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #113 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(113)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: a and a",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #2 (type: text) has no associated label",
+      "selector": "input:nth-of-type(2)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #3 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(3)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #4 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(4)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #5 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(5)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #6 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(6)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #7 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(7)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #8 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(8)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #9 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(9)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #10 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(10)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #11 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(11)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #12 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(12)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #13 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(13)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #14 (type: checkbox) has no associated label",
+      "selector": "input:nth-of-type(14)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/explore",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: input and input",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/c/c-programming-language",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image #14 is missing alt text (accessibility issue)",
+      "selector": "img[src=\"https://www.geeksforgeeks.org/c/c-programming-language/\"]",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/c/c-programming-language",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/c/c-programming-language",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #117 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(117)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/c/c-programming-language",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #123 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(123)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/c/c-programming-language",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #124 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(124)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/c/c-programming-language",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/c/c-programming-language",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: a and a",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/cpp/c-plus-plus",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image #14 is missing alt text (accessibility issue)",
+      "selector": "img[src=\"https://www.geeksforgeeks.org/cpp/c-plus-plus/\"]",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/cpp/c-plus-plus",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/cpp/c-plus-plus",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #123 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(123)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/cpp/c-plus-plus",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #129 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(129)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/cpp/c-plus-plus",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #130 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(130)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/cpp/c-plus-plus",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/cpp/c-plus-plus",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: a and a",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/java/java",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image #14 is missing alt text (accessibility issue)",
+      "selector": "img[src=\"https://www.geeksforgeeks.org/java/java/\"]",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/java/java",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/java/java",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #239 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(239)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/java/java",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #245 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(245)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/java/java",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #246 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(246)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/java/java",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/java/java",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: a and a",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image #14 is missing alt text (accessibility issue)",
+      "selector": "img[src=\"https://www.geeksforgeeks.org/python/python-programming-lang\"]",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #179 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(179)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #185 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(185)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #186 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(186)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: a and a",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/javascript/javascript-tutorial",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image #15 is missing alt text (accessibility issue)",
+      "selector": "img[src=\"https://www.geeksforgeeks.org/javascript/javascript-tutorial\"]",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/javascript/javascript-tutorial",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/javascript/javascript-tutorial",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #223 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(223)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/javascript/javascript-tutorial",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #229 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(229)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/javascript/javascript-tutorial",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #230 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(230)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/javascript/javascript-tutorial",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/javascript/javascript-tutorial",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: a and a",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image #13 is missing alt text (accessibility issue)",
+      "selector": "img[src=\"https://www.geeksforgeeks.org/data-science/data-science-for-\"]",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #180 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(180)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #186 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(186)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #187 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(187)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: a and a",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image #18 is missing alt text (accessibility issue)",
+      "selector": "img[src=\"https://www.geeksforgeeks.org/machine-learning/machine-learn\"]",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #1 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(1)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #167 has no text content (href: https://www.geeksforgeeks.org/)",
+      "selector": "a:nth-of-type(167)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #173 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(173)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link #174 has no text content (href: https://geeksforgeeksapp.page.link/gfg-app)",
+      "selector": "a:nth-of-type(174)",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field #1 (type: text) has no associated label",
+      "selector": "input:nth-of-type(1)",
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Interactive elements are overlapping: a and a",
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    }
+  ],
+  "formIssues": [],
+  "pagesScanned": [
+    {
+      "url": "https://www.geeksforgeeks.org",
+      "title": "GeeksforGeeks | Your All-in-One Learning Portal",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_0_https___www_geeksforgeeks_org.png",
+      "loadTimeMs": 547,
+      "linksFound": 89,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms",
+      "title": "DSA Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_1_https___www_geeksforgeeks_org_dsa_dsa_tutorial_learn_data_structures_and_algorit.png",
+      "loadTimeMs": 1350,
+      "linksFound": 162,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/explore",
+      "title": "Practice | GeeksforGeeks | A computer science portal for geeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_2_https___www_geeksforgeeks_org_explore.png",
+      "loadTimeMs": 548,
+      "linksFound": 17,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/c/c-programming-language",
+      "title": "C Programming Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_3_https___www_geeksforgeeks_org_c_c_programming_language.png",
+      "loadTimeMs": 1108,
+      "linksFound": 173,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/cpp/c-plus-plus",
+      "title": "C++ Programming Language - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_4_https___www_geeksforgeeks_org_cpp_c_plus_plus.png",
+      "loadTimeMs": 651,
+      "linksFound": 179,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/java/java",
+      "title": "Java Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_5_https___www_geeksforgeeks_org_java_java.png",
+      "loadTimeMs": 1137,
+      "linksFound": 295,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/python/python-programming-language-tutorial",
+      "title": "Python Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_6_https___www_geeksforgeeks_org_python_python_programming_language_tutorial.png",
+      "loadTimeMs": 678,
+      "linksFound": 235,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/javascript/javascript-tutorial",
+      "title": "JavaScript Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_7_https___www_geeksforgeeks_org_javascript_javascript_tutorial.png",
+      "loadTimeMs": 1916,
+      "linksFound": 279,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/data-science/data-science-for-beginners",
+      "title": "Data Science Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_8_https___www_geeksforgeeks_org_data_science_data_science_for_beginners.png",
+      "loadTimeMs": 658,
+      "linksFound": 228,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/machine-learning/machine-learning",
+      "title": "Machine Learning Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_9_https___www_geeksforgeeks_org_machine_learning_machine_learning.png",
+      "loadTimeMs": 704,
+      "linksFound": 223,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses",
+      "title": "Courses GeeksforGeeks | Interactive LIVE and Self-Paced Courses",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_10_https___www_geeksforgeeks_org_courses.png",
+      "loadTimeMs": 534,
+      "linksFound": 82,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/dsa-self-paced",
+      "title": "Data Structures and Algorithms - Self Paced",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_11_https___www_geeksforgeeks_org_courses_dsa_self_paced.png",
+      "loadTimeMs": 362,
+      "linksFound": 52,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/data-science-live",
+      "title": "Data Science Project Based Learning",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_12_https___www_geeksforgeeks_org_courses_data_science_live.png",
+      "loadTimeMs": 342,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/mastering-system-design-low-level-to-high-level-solutions",
+      "title": "System Design: Low-Level to High-Level - Self Paced",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_13_https___www_geeksforgeeks_org_courses_mastering_system_design_low_level_to_high_.png",
+      "loadTimeMs": 994,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/connect/home",
+      "title": "Connect-GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_14_https___www_geeksforgeeks_org_connect_home.png",
+      "loadTimeMs": 537,
+      "linksFound": 15,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/interviewe-101-data-structures-algorithm-system-design",
+      "title": "Tech Interview 101 - DSA and System Design",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_15_https___www_geeksforgeeks_org_courses_interviewe_101_data_structures_algorithm_s.png",
+      "loadTimeMs": 352,
+      "linksFound": 52,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/Java-backend-live",
+      "title": "Java Backend Development with AI - Live",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_16_https___www_geeksforgeeks_org_courses_Java_backend_live.png",
+      "loadTimeMs": 349,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/generative-ai-training-program",
+      "title": "Generative AI Training Program - Live",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_17_https___www_geeksforgeeks_org_courses_generative_ai_training_program.png",
+      "loadTimeMs": 345,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/devops-live",
+      "title": "DevOps Engineering with AI : Planning to Production",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_18_https___www_geeksforgeeks_org_courses_devops_live.png",
+      "loadTimeMs": 923,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/cpp-programming-basic-to-advanced",
+      "title": "C++ Programming - Self Paced",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_19_https___www_geeksforgeeks_org_courses_cpp_programming_basic_to_advanced.png",
+      "loadTimeMs": 346,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/courses/java-online-course-complete-beginner-to-advanced",
+      "title": "Java Programming - Self Paced",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_20_https___www_geeksforgeeks_org_courses_java_online_course_complete_beginner_to_ad.png",
+      "loadTimeMs": 331,
+      "linksFound": 54,
+      "formsFound": 0
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/jobs",
+      "title": "GFG Get Hired",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_21_https___www_geeksforgeeks_org_jobs.png",
+      "loadTimeMs": 260,
+      "linksFound": 50,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/gfg-hiring-solutions-for-recruiters",
+      "title": "GeeksforGeeks Hiring Solutions - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_22_https___www_geeksforgeeks_org_gfg_hiring_solutions_for_recruiters.png",
+      "loadTimeMs": 1220,
+      "linksFound": 53,
+      "formsFound": 2
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/advertise-with-us",
+      "title": "Advertise with us",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_23_https___www_geeksforgeeks_org_advertise_with_us.png",
+      "loadTimeMs": 553,
+      "linksFound": 60,
+      "formsFound": 2
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/campus-training-program",
+      "title": "Campus Training Program - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_24_https___www_geeksforgeeks_org_campus_training_program.png",
+      "loadTimeMs": 2091,
+      "linksFound": 104,
+      "formsFound": 6
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial",
+      "title": "DSA Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_25_https___www_geeksforgeeks_org_learn_data_structures_and_algorithms_dsa_tutorial.png",
+      "loadTimeMs": 678,
+      "linksFound": 162,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/web-development",
+      "title": "Web Development Technologies - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_26_https___www_geeksforgeeks_org_web_development.png",
+      "loadTimeMs": 746,
+      "linksFound": 120,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/ai-ml-ds",
+      "title": "AI, ML and Data Science Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_27_https___www_geeksforgeeks_org_ai_ml_ds.png",
+      "loadTimeMs": 673,
+      "linksFound": 156,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/machine-learning",
+      "title": "Machine Learning Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_28_https___www_geeksforgeeks_org_machine_learning.png",
+      "loadTimeMs": 681,
+      "linksFound": 223,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/python-programming-language",
+      "title": "Python Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_29_https___www_geeksforgeeks_org_python_programming_language.png",
+      "loadTimeMs": 701,
+      "linksFound": 235,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/system-design-tutorial",
+      "title": "System Design Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_30_https___www_geeksforgeeks_org_system_design_tutorial.png",
+      "loadTimeMs": 1146,
+      "linksFound": 257,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/devops-tutorial",
+      "title": "DevOps Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_31_https___www_geeksforgeeks_org_devops_tutorial.png",
+      "loadTimeMs": 657,
+      "linksFound": 200,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/computer-science-fundamentals/programming-language-tutorials",
+      "title": "Programming Languages Tutorials - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_32_https___www_geeksforgeeks_org_computer_science_fundamentals_programming_language.png",
+      "loadTimeMs": 1413,
+      "linksFound": 92,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/software-engineering/articles-on-computer-science-subjects-gq",
+      "title": "Computer Science Core Subjects - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_33_https___www_geeksforgeeks_org_software_engineering_articles_on_computer_science_.png",
+      "loadTimeMs": 1466,
+      "linksFound": 100,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/blogs/geeksforgeeks-practice-best-online-coding-platform",
+      "title": "GeeksforGeeks Practice - Leading Online Coding Platform - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_34_https___www_geeksforgeeks_org_blogs_geeksforgeeks_practice_best_online_coding_pl.png",
+      "loadTimeMs": 665,
+      "linksFound": 130,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/interview-prep/interview-corner",
+      "title": "Interview Corner - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_35_https___www_geeksforgeeks_org_interview_prep_interview_corner.png",
+      "loadTimeMs": 626,
+      "linksFound": 100,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/sql/guide-to-databases",
+      "title": "Guide to Databases - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_36_https___www_geeksforgeeks_org_sql_guide_to_databases.png",
+      "loadTimeMs": 1598,
+      "linksFound": 123,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/websites-apps/software-and-tools-a-to-z-list",
+      "title": "Software and Tools Directory - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_37_https___www_geeksforgeeks_org_websites_apps_software_and_tools_a_to_z_list.png",
+      "loadTimeMs": 1118,
+      "linksFound": 124,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/about",
+      "title": "About us - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_38_https___www_geeksforgeeks_org_about.png",
+      "loadTimeMs": 784,
+      "linksFound": 60,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/legal",
+      "title": "Legal - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_39_https___www_geeksforgeeks_org_legal.png",
+      "loadTimeMs": 786,
+      "linksFound": 81,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/legal/privacy-policy",
+      "title": "Privacy Policy - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_40_https___www_geeksforgeeks_org_legal_privacy_policy.png",
+      "loadTimeMs": 765,
+      "linksFound": 73,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/jobs?search=geeksforgeeks&tab_type=featured",
+      "title": "GFG Get Hired",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_41_https___www_geeksforgeeks_org_jobs_search_geeksforgeeks_tab_type_featured.png",
+      "loadTimeMs": 1514,
+      "linksFound": 50,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/about/contact-us",
+      "title": "Contact Us - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_42_https___www_geeksforgeeks_org_about_contact_us.png",
+      "loadTimeMs": 1160,
+      "linksFound": 61,
+      "formsFound": 2
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/gfg-corporate-solution",
+      "title": "GeeksforGeeks Corporate Solution - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_43_https___www_geeksforgeeks_org_gfg_corporate_solution.png",
+      "loadTimeMs": 1007,
+      "linksFound": 116,
+      "formsFound": 6
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/problem-of-the-day",
+      "title": "Problem of the Day | GeeksforGeeks | A computer science portal for geeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_44_https___www_geeksforgeeks_org_problem_of_the_day.png",
+      "loadTimeMs": 1379,
+      "linksFound": 85,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/explore?page=1&sortBy=submissions",
+      "title": "Practice | GeeksforGeeks | A computer science portal for geeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_45_https___www_geeksforgeeks_org_explore_page_1_sortBy_submissions.png",
+      "loadTimeMs": 736,
+      "linksFound": 17,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/category/blogs/?type=recent",
+      "title": "GBlog Archives - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_46_https___www_geeksforgeeks_org_category_blogs__type_recent.png",
+      "loadTimeMs": 307,
+      "linksFound": 155,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/web-tech/web-technology",
+      "title": "Web Development Technologies - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_47_https___www_geeksforgeeks_org_web_tech_web_technology.png",
+      "loadTimeMs": 1194,
+      "linksFound": 112,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/machine-learning/ai-ml-and-data-science-tutorial-learn-ai-ml-and-data-science",
+      "title": "AI, ML and Data Science Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_48_https___www_geeksforgeeks_org_machine_learning_ai_ml_and_data_science_tutorial_l.png",
+      "loadTimeMs": 1121,
+      "linksFound": 156,
+      "formsFound": 1
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/devops/devops-tutorial",
+      "title": "DevOps Tutorial - GeeksforGeeks",
+      "statusCode": 200,
+      "screenshotFile": "3e2a0285-b758-4f85-b1a4-c9d139720305_49_https___www_geeksforgeeks_org_devops_devops_tutorial.png",
+      "loadTimeMs": 1363,
+      "linksFound": 200,
+      "formsFound": 1
+    }
+  ]
+}

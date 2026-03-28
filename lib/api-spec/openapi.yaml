@@ -1,0 +1,419 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Autonomous QA Inspector API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: scan
+    description: QA Scan operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /scan:
+    post:
+      operationId: startScan
+      tags: [scan]
+      summary: Start a new QA scan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ScanRequest"
+      responses:
+        "200":
+          description: Scan job started
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ScanStartResponse"
+
+  /scan/{jobId}/status:
+    get:
+      operationId: getScanStatus
+      tags: [scan]
+      summary: Get scan job status
+      parameters:
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Scan status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ScanStatus"
+        "404":
+          description: Job not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /scan/{jobId}/report:
+    get:
+      operationId: getScanReport
+      tags: [scan]
+      summary: Get full scan report
+      parameters:
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Full bug report
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ScanReport"
+        "404":
+          description: Job not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /scan/{jobId}/screenshots:
+    get:
+      operationId: getScanScreenshots
+      tags: [scan]
+      summary: Get list of screenshots for a scan
+      parameters:
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Screenshot list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ScreenshotList"
+
+  /scan/{jobId}/export/html:
+    get:
+      operationId: exportScanHtml
+      tags: [scan]
+      summary: Export scan report as HTML
+      parameters:
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: HTML report
+          content:
+            text/html:
+              schema:
+                type: string
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+
+    ScanRequest:
+      type: object
+      properties:
+        url:
+          type: string
+        maxPages:
+          type: integer
+          default: 20
+        enableAI:
+          type: boolean
+          default: false
+      required:
+        - url
+
+    ScanStartResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+        status:
+          type: string
+        message:
+          type: string
+      required:
+        - jobId
+        - status
+
+    ScanStatus:
+      type: object
+      properties:
+        jobId:
+          type: string
+        status:
+          type: string
+          enum: [pending, running, completed, failed]
+        progress:
+          type: number
+          description: Progress percentage 0-100
+        currentStep:
+          type: string
+        currentUrl:
+          type: string
+        steps:
+          type: array
+          items:
+            $ref: "#/components/schemas/ScanStep"
+        error:
+          type: string
+        startedAt:
+          type: string
+        completedAt:
+          type: string
+      required:
+        - jobId
+        - status
+        - progress
+        - currentStep
+
+    ScanStep:
+      type: object
+      properties:
+        name:
+          type: string
+        status:
+          type: string
+          enum: [pending, running, completed, failed]
+        label:
+          type: string
+      required:
+        - name
+        - status
+        - label
+
+    BrokenLink:
+      type: object
+      properties:
+        sourcePage:
+          type: string
+        linkUrl:
+          type: string
+        statusCode:
+          type: integer
+        statusType:
+          type: string
+        error:
+          type: string
+        aiCategory:
+          type: string
+        aiConfidence:
+          type: number
+      required:
+        - sourcePage
+        - linkUrl
+        - statusCode
+        - statusType
+
+    UIIssue:
+      type: object
+      properties:
+        page:
+          type: string
+        severity:
+          type: string
+          enum: [Low, Medium, High]
+        issueType:
+          type: string
+        description:
+          type: string
+        selector:
+          type: string
+        aiCategory:
+          type: string
+        aiConfidence:
+          type: number
+      required:
+        - page
+        - severity
+        - issueType
+        - description
+
+    FormIssue:
+      type: object
+      properties:
+        page:
+          type: string
+        formSelector:
+          type: string
+        issueType:
+          type: string
+        description:
+          type: string
+        severity:
+          type: string
+          enum: [Low, Medium, High]
+        aiCategory:
+          type: string
+        aiConfidence:
+          type: number
+      required:
+        - page
+        - formSelector
+        - issueType
+        - description
+        - severity
+
+    PageScanned:
+      type: object
+      properties:
+        url:
+          type: string
+        title:
+          type: string
+        statusCode:
+          type: integer
+        screenshotFile:
+          type: string
+        loadTimeMs:
+          type: integer
+        linksFound:
+          type: integer
+        formsFound:
+          type: integer
+      required:
+        - url
+        - statusCode
+
+    ScanSummary:
+      type: object
+      properties:
+        totalBugs:
+          type: integer
+        brokenLinks:
+          type: integer
+        uiIssues:
+          type: integer
+        formIssues:
+          type: integer
+        healthScore:
+          type: integer
+          description: Site health score 0-100
+        severityCounts:
+          type: object
+          properties:
+            high:
+              type: integer
+            medium:
+              type: integer
+            low:
+              type: integer
+          required:
+            - high
+            - medium
+            - low
+      required:
+        - totalBugs
+        - brokenLinks
+        - uiIssues
+        - formIssues
+        - severityCounts
+
+    ScanReport:
+      type: object
+      properties:
+        jobId:
+          type: string
+        targetUrl:
+          type: string
+        scannedAt:
+          type: string
+        totalPages:
+          type: integer
+        scanDurationMs:
+          type: integer
+        summary:
+          $ref: "#/components/schemas/ScanSummary"
+        brokenLinks:
+          type: array
+          items:
+            $ref: "#/components/schemas/BrokenLink"
+        uiIssues:
+          type: array
+          items:
+            $ref: "#/components/schemas/UIIssue"
+        formIssues:
+          type: array
+          items:
+            $ref: "#/components/schemas/FormIssue"
+        pagesScanned:
+          type: array
+          items:
+            $ref: "#/components/schemas/PageScanned"
+      required:
+        - jobId
+        - targetUrl
+        - scannedAt
+        - totalPages
+        - scanDurationMs
+        - summary
+        - brokenLinks
+        - uiIssues
+        - formIssues
+        - pagesScanned
+
+    ScreenshotList:
+      type: object
+      properties:
+        jobId:
+          type: string
+        screenshots:
+          type: array
+          items:
+            type: object
+            properties:
+              filename:
+                type: string
+              url:
+                type: string
+              pageUrl:
+                type: string
+            required:
+              - filename
+              - url
+              - pageUrl
+      required:
+        - jobId
+        - screenshots

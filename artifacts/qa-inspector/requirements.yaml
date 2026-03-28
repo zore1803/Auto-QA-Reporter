@@ -1,0 +1,19 @@
+packages:
+  "framer-motion": "For terminal-like scan animations and smooth transitions"
+  "clsx": "For tailwind class merging"
+  "tailwind-merge": "For tailwind class merging"
+  "@radix-ui/react-slot": "For UI components"
+  "@radix-ui/react-switch": "For AI toggle"
+  "@radix-ui/react-slider": "For max pages slider"
+  "@radix-ui/react-tabs": "For bug report tabs"
+  "@radix-ui/react-dialog": "For screenshot modal"
+
+images:
+  - path: "artifacts/qa-inspector/public/images/cyber-grid.png"
+    description: "A dark high-tech cyberpunk grid background with subtle cyan glowing nodes and wireframe aesthetic, suitable for an industrial hacker interface. Extremely dark, mostly black and deep navy with minimal cyan lines."
+    aspect_ratio: "16:9"
+
+notes:
+  - Using generated React Query hooks from @workspace/api-client-react
+  - Polling interval set to 2000ms for status updates
+  - Assuming UI runs at base path and API at /api

@@ -1,0 +1,339 @@
+{
+  "jobId": "442c21b9-1378-46df-943f-7a17a14f18a3",
+  "targetUrl": "https://books.toscrape.com/",
+  "scannedAt": "2026-03-27T05:53:25.211Z",
+  "totalPages": 1,
+  "scanDurationMs": 19335,
+  "summary": {
+    "totalBugs": 24,
+    "brokenLinks": 0,
+    "uiIssues": 3,
+    "formIssues": 21,
+    "journeyIssues": 0,
+    "healthScore": 73,
+    "severityCounts": {
+      "high": 0,
+      "medium": 1,
+      "low": 23
+    },
+    "newIssues": 0,
+    "fixedIssues": 0,
+    "repeatedIssues": 24
+  },
+  "brokenLinks": [],
+  "uiIssues": [
+    {
+      "page": "https://books.toscrape.com",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 54 (href: \"https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(54)",
+      "occurrences": 20,
+      "aiCategory": "Accessibility Issue",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"A Light in the ...\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "h3",
+      "boundingBox": {
+        "x": 365,
+        "y": 642.109375,
+        "width": 195,
+        "height": 20
+      },
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "issueStatus": "repeated"
+    }
+  ],
+  "formIssues": [
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(1)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(1)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(2)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(2)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(3)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(3)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(4)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(4)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(5)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(5)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(6)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(6)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(7)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(7)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(8)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(8)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(9)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(9)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(10)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(10)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(11)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(11)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(12)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(12)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(13)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(13)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(14)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(14)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(15)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(15)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(16)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(16)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(17)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(17)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(18)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(18)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(19)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(19)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(20)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(20)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://books.toscrape.com",
+      "formSelector": "form:nth-of-type(21)",
+      "issueType": "Empty Form",
+      "description": "Form \"form:nth-of-type(21)\" contains no input elements at all.",
+      "impact": "A form with no inputs serves no purpose and may indicate a rendering error or missing markup. Users who interact with it will be confused or unable to complete the intended action.",
+      "recommendation": "Add the appropriate input fields, or remove the <form> element if it is no longer needed. Verify the page renders correctly in all target browsers.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "issueStatus": "repeated"
+    }
+  ],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://books.toscrape.com",
+      "title": "All products | Books to Scrape - Sandbox",
+      "statusCode": 200,
+      "screenshotFile": "442c21b9-1378-46df-943f-7a17a14f18a3_0_https___books_toscrape_com.png",
+      "loadTimeMs": 2642,
+      "linksFound": 94,
+      "formsFound": 21
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ],
+  "previousJobId": "88c60988-5a41-439f-a9f4-45d60f90761c"
+}

@@ -1,0 +1,76 @@
+{
+  "jobId": "08e776ae-d7f9-4520-8d45-755762767341",
+  "targetUrl": "https://www.google.com/aclk?sa=L&ai=DChsSEwjejoCUqb-TAxWhHYMDHRpeJa8YACICCAEQABoCc2Y&co=1&gclid=CjwKCAjwspPOBhB9EiwATFbi5J59I9faRXSoo0ciI-ptoL3tlJngQMbvZFn-oU2d940RInrXGyZA3hoC-U4QAvD_BwE&cid=CAASuwHkaK958ABq8WgM-qaR4GHkUD50RrRQkA225asMi9tz2RWjLU4JvXY8TkHWaOFMOPLugfpHW2m_NmIz_U0ARHp2umwy1eM4EBkjEdDGhWGov_P9XEf6flQhZmBYc1fDSr_y43r6bD7rh5zvxaxVY6rvlKAlom6OsiILfuGOyvdLp8CO_u4RsHlVwjY7taBrQeMEgKQDfIVMdenUh8y5gYRZFHbmkICcpIhFdfBhcWstiWUUNsyorlOe3vOs&cce=2&sig=AOD64_0RwSlWOhPhwvfCyh3pcZ16lydK0w&q&adurl&ved=2ahUKEwjttfqTqb-TAxXE1DgGHRlbMKoQ0Qx6BAgLEAE",
+  "scannedAt": "2026-03-27T05:14:48.420Z",
+  "totalPages": 1,
+  "scanDurationMs": 7691,
+  "summary": {
+    "totalBugs": 2,
+    "brokenLinks": 0,
+    "uiIssues": 2,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 95,
+    "severityCounts": {
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "newIssues": 1,
+    "fixedIssues": 117,
+    "repeatedIssues": 1
+  },
+  "brokenLinks": [],
+  "uiIssues": [
+    {
+      "page": "https://www.google.com/aclk?sa=L&ai=DChsSEwjejoCUqb-TAxWhHYMDHRpeJa8YACICCAEQABoCc2Y&co=1&gclid=CjwKCAjwspPOBhB9EiwATFbi5J59I9faRXSoo0ciI-ptoL3tlJngQMbvZFn-oU2d940RInrXGyZA3hoC-U4QAvD_BwE&cid=CAASuwHkaK958ABq8WgM-qaR4GHkUD50RrRQkA225asMi9tz2RWjLU4JvXY8TkHWaOFMOPLugfpHW2m_NmIz_U0ARHp2umwy1eM4EBkjEdDGhWGov_P9XEf6flQhZmBYc1fDSr_y43r6bD7rh5zvxaxVY6rvlKAlom6OsiILfuGOyvdLp8CO_u4RsHlVwjY7taBrQeMEgKQDfIVMdenUh8y5gYRZFHbmkICcpIhFdfBhcWstiWUUNsyorlOe3vOs&cce=2&sig=AOD64_0RwSlWOhPhwvfCyh3pcZ16lydK0w&q&adurl&ved=2ahUKEwjttfqTqb-TAxXE1DgGHRlbMKoQ0Qx6BAgLEAE",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://www.google.com/aclk?sa=L&ai=DChsSEwjejoCUqb-TAxWhHYMDHRpeJa8YACICCAEQABoCc2Y&co=1&gclid=CjwKCAjwspPOBhB9EiwATFbi5J59I9faRXSoo0ciI-ptoL3tlJngQMbvZFn-oU2d940RInrXGyZA3hoC-U4QAvD_BwE&cid=CAASuwHkaK958ABq8WgM-qaR4GHkUD50RrRQkA225asMi9tz2RWjLU4JvXY8TkHWaOFMOPLugfpHW2m_NmIz_U0ARHp2umwy1eM4EBkjEdDGhWGov_P9XEf6flQhZmBYc1fDSr_y43r6bD7rh5zvxaxVY6rvlKAlom6OsiILfuGOyvdLp8CO_u4RsHlVwjY7taBrQeMEgKQDfIVMdenUh8y5gYRZFHbmkICcpIhFdfBhcWstiWUUNsyorlOe3vOs&cce=2&sig=AOD64_0RwSlWOhPhwvfCyh3pcZ16lydK0w&q&adurl&ved=2ahUKEwjttfqTqb-TAxXE1DgGHRlbMKoQ0Qx6BAgLEAE",
+      "severity": "Medium",
+      "issueType": "Missing Page Title",
+      "description": "This page has no <title> element, or it is blank.",
+      "impact": "The page title is displayed in browser tabs, bookmarks, and search result headlines. A missing title is a WCAG 2.4.2 Level A failure and significantly hurts SEO.",
+      "recommendation": "Add <title>Descriptive Page Name — Site Name</title> inside <head>. Keep it under 60 characters.",
+      "selector": "head > title",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65,
+      "issueStatus": "new"
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://www.google.com/aclk?sa=L&ai=DChsSEwjejoCUqb-TAxWhHYMDHRpeJa8YACICCAEQABoCc2Y&co=1&gclid=CjwKCAjwspPOBhB9EiwATFbi5J59I9faRXSoo0ciI-ptoL3tlJngQMbvZFn-oU2d940RInrXGyZA3hoC-U4QAvD_BwE&cid=CAASuwHkaK958ABq8WgM-qaR4GHkUD50RrRQkA225asMi9tz2RWjLU4JvXY8TkHWaOFMOPLugfpHW2m_NmIz_U0ARHp2umwy1eM4EBkjEdDGhWGov_P9XEf6flQhZmBYc1fDSr_y43r6bD7rh5zvxaxVY6rvlKAlom6OsiILfuGOyvdLp8CO_u4RsHlVwjY7taBrQeMEgKQDfIVMdenUh8y5gYRZFHbmkICcpIhFdfBhcWstiWUUNsyorlOe3vOs&cce=2&sig=AOD64_0RwSlWOhPhwvfCyh3pcZ16lydK0w&q&adurl&ved=2ahUKEwjttfqTqb-TAxXE1DgGHRlbMKoQ0Qx6BAgLEAE",
+      "statusCode": 0,
+      "loadTimeMs": 2404,
+      "linksFound": 0,
+      "formsFound": 0,
+      "title": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation"
+    }
+  ],
+  "browsers": [
+    "chromium",
+    "firefox"
+  ],
+  "previousJobId": "e0264616-efd6-4aff-b76d-75ce30beebfe"
+}

@@ -1,0 +1,128 @@
+{
+  "jobId": "a4ebdf8e-301f-4a13-ac08-89127468aded",
+  "targetUrl": "https://sanketzoreportfoli.vercel.app/",
+  "scannedAt": "2026-03-27T17:51:20.146Z",
+  "totalPages": 3,
+  "scanDurationMs": 9091,
+  "summary": {
+    "totalBugs": 6,
+    "brokenLinks": 6,
+    "uiIssues": 0,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 76,
+    "severityCounts": {
+      "high": 0,
+      "medium": 6,
+      "low": 0
+    },
+    "newIssues": 0,
+    "fixedIssues": 0,
+    "repeatedIssues": 6
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://sanketzoreportfoli.vercel.app/contact",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://sanketzoreportfoli.vercel.app/contact\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://sanketzoreportfoli.vercel.app/about",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://sanketzoreportfoli.vercel.app/about\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://sanketzoreportfoli.vercel.app/experience",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://sanketzoreportfoli.vercel.app/experience\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://sanketzoreportfoli.vercel.app/projects",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://sanketzoreportfoli.vercel.app/projects\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://www.linkedin.com/in/sanketzore135",
+      "statusCode": 405,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 405 for \"https://www.linkedin.com/in/sanketzore135\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 405 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://drive.google.com/file/d/1Dm2WiZ0KJ5Z7VbZj0KufKmQIRgk_M7ax/view?usp=drive_link",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://drive.google.com/file/d/1Dm2WiZ0KJ5Z7VbZj0KufKmQIRgk_M7ax/view?usp=drive_link\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "issueStatus": "repeated"
+    }
+  ],
+  "uiIssues": [],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://sanketzoreportfoli.vercel.app",
+      "title": "Sanket Ramesh Zore - Portfolio",
+      "statusCode": 200,
+      "screenshotFile": "a4ebdf8e-301f-4a13-ac08-89127468aded_0_https___sanketzoreportfoli_vercel_app.png",
+      "loadTimeMs": 2101,
+      "linksFound": 18,
+      "formsFound": 0
+    },
+    {
+      "url": "https://sanketzoreportfoli.vercel.app/about",
+      "title": "404: NOT_FOUND",
+      "statusCode": 404,
+      "screenshotFile": "a4ebdf8e-301f-4a13-ac08-89127468aded_1_https___sanketzoreportfoli_vercel_app_about.png",
+      "loadTimeMs": 557,
+      "linksFound": 1,
+      "formsFound": 0
+    },
+    {
+      "url": "https://sanketzoreportfoli.vercel.app/projects",
+      "title": "404: NOT_FOUND",
+      "statusCode": 404,
+      "screenshotFile": "a4ebdf8e-301f-4a13-ac08-89127468aded_2_https___sanketzoreportfoli_vercel_app_projects.png",
+      "loadTimeMs": 554,
+      "linksFound": 1,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ],
+  "previousJobId": "a8b8e633-0fdd-4f2e-9f88-7a5c2a98bc5a"
+}

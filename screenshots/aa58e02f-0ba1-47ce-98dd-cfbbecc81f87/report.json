@@ -1,0 +1,844 @@
+{
+  "jobId": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87",
+  "targetUrl": "https://demoqa.com/",
+  "scannedAt": "2026-03-26T13:55:00.070Z",
+  "totalPages": 10,
+  "scanDurationMs": 30976,
+  "summary": {
+    "totalBugs": 49,
+    "brokenLinks": 0,
+    "uiIssues": 46,
+    "formIssues": 3,
+    "journeyIssues": 0,
+    "healthScore": 0,
+    "severityCounts": {
+      "high": 18,
+      "medium": 20,
+      "low": 11
+    }
+  },
+  "brokenLinks": [],
+  "uiIssues": [
+    {
+      "page": "https://demoqa.com",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/elements",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/elements",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/elements",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/elements",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/elements",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: a and a at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://demoqa.com/forms",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/forms",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/forms",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/forms",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/alertsWindows",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/alertsWindows",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/alertsWindows",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/alertsWindows",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/widgets",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/widgets",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/widgets",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/widgets",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/interaction",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/interaction",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/interaction",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/interaction",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/books",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/books",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/books",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/books",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/books",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/books",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://demoqa.com/text-box",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/text-box",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/text-box",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/text-box",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/text-box",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/text-box",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: a and a at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://demoqa.com/checkbox",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/checkbox",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/checkbox",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/checkbox",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/checkbox",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: a and a at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://demoqa.com/radio-button",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "img[src=\"https://demoqa.com/assets/Toolsqa-DZdwt2ul.jpg\"]",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/radio-button",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/radio-button",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://demoqa.com/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "a:nth-of-type(1)",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://demoqa.com/radio-button",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://demoqa.com/radio-button",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: a and a at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    }
+  ],
+  "formIssues": [
+    {
+      "page": "https://demoqa.com/text-box",
+      "formSelector": "#userForm",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"#userForm\" has 4 input fields but none are marked as required.",
+      "impact": "Without required-field marking, users have no visual indication of which fields must be filled. This increases form abandonment and the likelihood of incomplete submissions reaching the server.",
+      "recommendation": "Add the required attribute to all mandatory inputs. Additionally, visually indicate required fields with an asterisk (*) and a legend explaining the symbol (e.g., \"* Required field\").",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://demoqa.com/text-box",
+      "formSelector": "#userForm",
+      "issueType": "No Input Sanitization (SQL Injection)",
+      "description": "Text input \"#userName\" in form \"#userForm\" accepted the SQL injection string \"' OR '1'='1\" without any client-side sanitization or rejection.",
+      "impact": "If this input is passed unsanitised to a database query, an attacker can manipulate the query to read, modify, or delete arbitrary data — including user credentials and private records. SQL injection is consistently ranked #1 in the OWASP Top 10 web vulnerabilities.",
+      "recommendation": "Never construct SQL queries by concatenating user input. Use parameterised queries or prepared statements in all server-side database calls. On the client side, validate and reject obviously malicious patterns. Consider a Web Application Firewall (WAF) as an additional layer.",
+      "severity": "High",
+      "occurrences": 1,
+      "aiCategory": "Security Risk",
+      "aiConfidence": 0.9
+    },
+    {
+      "page": "https://demoqa.com/text-box",
+      "formSelector": "#userForm",
+      "issueType": "No Input Sanitization (XSS)",
+      "description": "Text input \"#userName\" in form \"#userForm\" accepted a cross-site scripting (XSS) payload (\"<script>alert(\"xss\")</script>…\") without sanitization.",
+      "impact": "If this input is reflected back in the page HTML without escaping, an attacker can inject scripts that steal session cookies, redirect users to malicious sites, or perform actions on behalf of the victim. Stored XSS can affect every subsequent visitor who views the content.",
+      "recommendation": "Escape all user-supplied content before rendering it as HTML (use textContent instead of innerHTML, or a templating library that auto-escapes). Apply a strict Content-Security-Policy (CSP) header. Consider a sanitisation library like DOMPurify for any HTML you must render dynamically.",
+      "severity": "High",
+      "occurrences": 1,
+      "aiCategory": "Security Risk",
+      "aiConfidence": 0.9
+    }
+  ],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://demoqa.com",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_0_https___demoqa_com.png",
+      "loadTimeMs": 1638,
+      "linksFound": 8,
+      "formsFound": 0
+    },
+    {
+      "url": "https://demoqa.com/elements",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_1_https___demoqa_com_elements.png",
+      "loadTimeMs": 465,
+      "linksFound": 34,
+      "formsFound": 0
+    },
+    {
+      "url": "https://demoqa.com/forms",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_2_https___demoqa_com_forms.png",
+      "loadTimeMs": 455,
+      "linksFound": 34,
+      "formsFound": 0
+    },
+    {
+      "url": "https://demoqa.com/alertsWindows",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_3_https___demoqa_com_alertsWindows.png",
+      "loadTimeMs": 721,
+      "linksFound": 34,
+      "formsFound": 0
+    },
+    {
+      "url": "https://demoqa.com/widgets",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_4_https___demoqa_com_widgets.png",
+      "loadTimeMs": 726,
+      "linksFound": 34,
+      "formsFound": 0
+    },
+    {
+      "url": "https://demoqa.com/interaction",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_5_https___demoqa_com_interaction.png",
+      "loadTimeMs": 372,
+      "linksFound": 34,
+      "formsFound": 0
+    },
+    {
+      "url": "https://demoqa.com/books",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_6_https___demoqa_com_books.png",
+      "loadTimeMs": 349,
+      "linksFound": 34,
+      "formsFound": 0
+    },
+    {
+      "url": "https://demoqa.com/text-box",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_7_https___demoqa_com_text_box.png",
+      "loadTimeMs": 497,
+      "linksFound": 34,
+      "formsFound": 1
+    },
+    {
+      "url": "https://demoqa.com/checkbox",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_8_https___demoqa_com_checkbox.png",
+      "loadTimeMs": 351,
+      "linksFound": 34,
+      "formsFound": 0
+    },
+    {
+      "url": "https://demoqa.com/radio-button",
+      "title": "demosite",
+      "statusCode": 200,
+      "screenshotFile": "aa58e02f-0ba1-47ce-98dd-cfbbecc81f87_9_https___demoqa_com_radio_button.png",
+      "loadTimeMs": 351,
+      "linksFound": 34,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium",
+    "webkit"
+  ]
+}

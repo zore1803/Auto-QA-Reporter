@@ -1,0 +1,21 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node scripts/dev.cjs",
+    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
+  },
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.27.4",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2"
+  },
+  "dependencies": {
+    "jimp": "^1.6.0"
+  }
+}

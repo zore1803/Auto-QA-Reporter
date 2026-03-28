@@ -1,0 +1,56 @@
+{
+  "jobId": "8ca69b05-f031-4cd7-9109-4520a2fd8dfd",
+  "targetUrl": "https://www.instagram.com/accounts/login/?hl=en",
+  "scannedAt": "2026-03-21T18:30:02.113Z",
+  "totalPages": 1,
+  "scanDurationMs": 1717,
+  "summary": {
+    "totalBugs": 2,
+    "brokenLinks": 0,
+    "uiIssues": 2,
+    "formIssues": 0,
+    "healthScore": 95,
+    "severityCounts": {
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    }
+  },
+  "brokenLinks": [],
+  "uiIssues": [
+    {
+      "page": "https://www.instagram.com/accounts/login/?hl=en",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt from page content, which may be irrelevant or unattractive to users — reducing click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise, keyword-rich summary of the page (ideally 150–160 characters). Each page should have a unique description.",
+      "selector": "head",
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://www.instagram.com/accounts/login/?hl=en",
+      "severity": "Medium",
+      "issueType": "Missing Page Title",
+      "description": "This page has no <title> element, or it is blank.",
+      "impact": "The page title is displayed in browser tabs, bookmarks, and search result headlines. A missing title is a WCAG 2.4.2 Level A failure, makes the tab unidentifiable, and significantly hurts SEO rankings because title content is a top-weighted ranking signal.",
+      "recommendation": "Add <title>Descriptive Page Name — Site Name</title> inside <head>. Keep it under 60 characters and place the most important keyword near the beginning.",
+      "selector": "head > title",
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    }
+  ],
+  "formIssues": [],
+  "pagesScanned": [
+    {
+      "url": "https://www.instagram.com/accounts/login/?hl=en",
+      "title": "",
+      "statusCode": 429,
+      "screenshotFile": "8ca69b05-f031-4cd7-9109-4520a2fd8dfd_0_https___www_instagram_com_accounts_login__hl_en.png",
+      "loadTimeMs": 415,
+      "linksFound": 0,
+      "formsFound": 0
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "jobId": "8853f0dc-9ece-4afa-864d-8d3d2dff1566",
+  "targetUrl": "https://example.com/",
+  "scannedAt": "2026-03-26T13:13:42.635Z",
+  "totalPages": 1,
+  "scanDurationMs": 9253,
+  "summary": {
+    "totalBugs": 1,
+    "brokenLinks": 0,
+    "uiIssues": 1,
+    "formIssues": 0,
+    "healthScore": 99,
+    "severityCounts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    }
+  },
+  "brokenLinks": [],
+  "uiIssues": [
+    {
+      "page": "https://example.com",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt from page content, which may be irrelevant or unattractive to users — reducing click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise, keyword-rich summary of the page (ideally 150–160 characters). Each page should have a unique description.",
+      "selector": "head",
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    }
+  ],
+  "formIssues": [],
+  "pagesScanned": [
+    {
+      "url": "https://example.com",
+      "title": "Example Domain",
+      "statusCode": 200,
+      "screenshotFile": "8853f0dc-9ece-4afa-864d-8d3d2dff1566_0_https___example_com.png",
+      "loadTimeMs": 563,
+      "linksFound": 1,
+      "formsFound": 0
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "jobId": "95b178aa-35ff-43c0-b74d-feb99135a875",
+  "targetUrl": "https://twitter.com/geeksforgeeks",
+  "scannedAt": "2026-03-27T05:31:10.539Z",
+  "totalPages": 1,
+  "scanDurationMs": 10384,
+  "summary": {
+    "totalBugs": 5,
+    "brokenLinks": 3,
+    "uiIssues": 2,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 83,
+    "severityCounts": {
+      "high": 0,
+      "medium": 4,
+      "low": 1
+    }
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://twitter.com/geeksforgeeks",
+      "linkUrl": "https://x.com/i/flow/signup",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 403 for \"https://x.com/i/flow/signup\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 403 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://twitter.com/geeksforgeeks",
+      "linkUrl": "https://x.com/login",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 403 for \"https://x.com/login\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 403 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://twitter.com/geeksforgeeks",
+      "linkUrl": "https://x.com/",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 403 for \"https://x.com/\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 403 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://twitter.com/geeksforgeeks",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://twitter.com/geeksforgeeks",
+      "severity": "Medium",
+      "issueType": "Missing Page Title",
+      "description": "This page has no <title> element, or it is blank.",
+      "impact": "The page title is displayed in browser tabs, bookmarks, and search result headlines. A missing title is a WCAG 2.4.2 Level A failure and significantly hurts SEO.",
+      "recommendation": "Add <title>Descriptive Page Name — Site Name</title> inside <head>. Keep it under 60 characters.",
+      "selector": "head > title",
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://twitter.com/geeksforgeeks",
+      "title": "",
+      "statusCode": 200,
+      "screenshotFile": "95b178aa-35ff-43c0-b74d-feb99135a875_0_https___twitter_com_geeksforgeeks.png",
+      "loadTimeMs": 2186,
+      "linksFound": 3,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ]
+}
