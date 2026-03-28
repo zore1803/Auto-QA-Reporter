@@ -49,6 +49,7 @@ export function buildReport(params: {
   journeyResults?: import('./types.js').JourneyResult[];
   pagesScanned: PageScanned[];
   browsers: BrowserName[];
+  device?: string;
   previousJobId?: string;
   newCount?: number;
   fixedCount?: number;
@@ -77,7 +78,7 @@ export function buildReport(params: {
   const mediumCount = allSeverities.filter((s) => s === 'Medium').length;
   const lowCount = allSeverities.filter((s) => s === 'Low').length;
 
-  const healthScore = Math.max(0, 100 - highCount * 10 - mediumCount * 4 - lowCount * 1);
+  const healthScore = Math.max(0, 100 - highCount * 12 - mediumCount * 4 - lowCount * 1);
 
   return {
     jobId: params.jobId,
@@ -104,6 +105,7 @@ export function buildReport(params: {
     journeyResults: params.journeyResults,
     pagesScanned: params.pagesScanned,
     browsers: params.browsers,
+    device: params.device,
     previousJobId: params.previousJobId,
   };
 }

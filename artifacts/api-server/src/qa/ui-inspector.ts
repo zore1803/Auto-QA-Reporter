@@ -1,4 +1,4 @@
-import { chromium, type Page } from 'playwright';
+import { chromium, devices, type Page } from 'playwright';
 import type { UIIssue, Severity, BoundingBox } from './types.js';
 import { playwrightEnv } from './playwright-env.js';
 
@@ -77,7 +77,8 @@ export async function runPageUIChecks(page: Page, url: string): Promise<UIIssue[
     document.querySelectorAll('button').forEach((btn, i) => {
       const text = btn.textContent?.trim() || '';
       const ariaLabel = btn.getAttribute('aria-label') || '';
-      if (!text && !ariaLabel) {
+      const title = btn.getAttribute('title') || '';
+      if (!text && !ariaLabel && !title) {
         found.push({
           severity: 'High',
           issueType: 'Empty Button',
@@ -95,7 +96,8 @@ export async function runPageUIChecks(page: Page, url: string): Promise<UIIssue[
     document.querySelectorAll('a').forEach((link, i) => {
       const text = link.textContent?.trim() || '';
       const ariaLabel = link.getAttribute('aria-label') || '';
-      if (!text && !ariaLabel) {
+      const title = link.getAttribute('title') || '';
+      if (!text && !ariaLabel && !title) {
         const href = link.href?.substring(0, 80) || 'none';
         found.push({
           severity: 'Medium',
@@ -269,13 +271,17 @@ export async function runPageUIChecks(page: Page, url: string): Promise<UIIssue[
 /**
  * Run UI inspection using Chromium (default, backward-compatible entry point).
  */
-export async function inspectUI(pages: Array<{ url: string }>): Promise<UIIssue[]> {
+export async function inspectUI(pages: Array<{ url: string }>, device?: string): Promise<UIIssue[]> {
   const issues: UIIssue[] = [];
   let browser = null;
   try {
     browser = await chromium.launch({ headless: true, env: playwrightEnv() });
     console.log('[inspectUI] Browser launched');
-    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+
+    const deviceConfig = device && devices[device] 
+      ? { ...devices[device], deviceScaleFactor: 1 } 
+      : { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 };
+    const context = await browser.newContext(deviceConfig);
     
     // Inject __name shim to prevent esbuild-injected helper errors in browser context
     await context.addInitScript(() => {
@@ -286,12 +292,29 @@ export async function inspectUI(pages: Array<{ url: string }>): Promise<UIIssue[
     const inspectionPromises = pages.map(async ({ url }) => {
       const page = await context.newPage();
       try {
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
-        try { await page.waitForLoadState('networkidle', { timeout: 10000 }); } catch {}
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 10000 });
+        try { await page.waitForLoadState('networkidle', { timeout: 5000 }); } catch {}
         console.log(`[inspectUI] Page loaded: ${url}`);
+        
+        // Capture console errors
+        const consoleErrors: UIIssue[] = [];
+        page.on('console', msg => {
+          if (msg.type() === 'error') {
+            consoleErrors.push({
+              page: url,
+              severity: 'High',
+              issueType: 'Console Error',
+              description: `JS Error: ${msg.text()}`,
+              impact: 'Javascript errors can break critical site functionality and user interactions.',
+              recommendation: 'Check the browser console and source code to resolve this exception.'
+            });
+          }
+        });
+
         const pageIssues = await runPageUIChecks(page, url);
-        console.log(`[inspectUI] ${url} => ${pageIssues.length} issues`);
-        return pageIssues;
+        const combined = [...pageIssues, ...consoleErrors];
+        console.log(`[inspectUI] ${url} => ${combined.length} issues`);
+        return combined;
       } catch (err) {
         console.error(`[inspectUI] Failed on ${url}:`, err instanceof Error ? err.message : err);
         // Skip failed pages

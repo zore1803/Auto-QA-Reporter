@@ -200,7 +200,7 @@ export function BugReportTable({ report }: BugReportTableProps) {
         </div>
         <div className="divide-y">
           {filtered.map((issue) => (
-            <div key={issue.id} className="flex flex-col hover:bg-muted/30 transition-colors">
+            <div key={issue.id} className="flex flex-col hover:bg-cyan-500/[0.03] transition-colors group">
               <div
                 className="grid grid-cols-12 gap-4 p-3 items-center cursor-pointer"
                 onClick={() => setExpandedRow(expandedRow === issue.id ? null : issue.id)}
@@ -259,16 +259,37 @@ export function BugReportTable({ report }: BugReportTableProps) {
                       <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">What was found</span>
                     </div>
                     <p className="text-sm leading-relaxed">{issue.description}</p>
-                    <div className="pt-2">
-                      <span className="text-xs text-muted-foreground">Detected on: </span>
-                      <a
-                        href={issue.page}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-primary hover:underline inline-flex items-center gap-1 font-mono text-xs break-all"
-                      >
-                        {issue.page} <ExternalLink className="w-3 h-3 flex-shrink-0" />
-                      </a>
+                    <div className="pt-2 flex flex-col gap-4">
+                      <div>
+                        <span className="text-xs text-muted-foreground">Detected on: </span>
+                        <a
+                          href={issue.page}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-primary hover:underline inline-flex items-center gap-1 font-mono text-xs break-all"
+                        >
+                          {issue.page} <ExternalLink className="w-3 h-3 flex-shrink-0" />
+                        </a>
+                      </div>
+                      
+                      {/* UI Issue Screenshot Rendering */}
+                      {(() => {
+                        if (issue.type !== 'UI') return null;
+                        const p = report.pagesScanned?.find(page => page.url === issue.page);
+                        const file = p?.screenshotFile;
+                        if (!file) return null;
+                        const url = `/api/screenshots/${encodeURIComponent(file)}`;
+                        return (
+                          <div className="border border-white/10 rounded-md overflow-hidden bg-black/50">
+                            <div className="bg-[#0f172a] px-3 py-2 border-b border-white/5 text-[10px] uppercase font-mono tracking-widest text-cyan-400">
+                              Visual Context
+                            </div>
+                            <div className="p-2 flex justify-center bg-[#06060a]">
+                              <img src={url} alt="UI Issue Area" className="max-h-[500px] w-auto border border-white/5 shadow-2xl" />
+                            </div>
+                          </div>
+                        );
+                      })()}
                     </div>
                   </div>
 

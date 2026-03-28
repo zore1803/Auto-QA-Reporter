@@ -120,6 +120,7 @@ export interface ScanReport {
   journeyResults?: JourneyResult[];
   pagesScanned: PageScanned[];
   browsers: BrowserName[];
+  device?: string;
   previousJobId?: string;
 }
 
@@ -129,6 +130,7 @@ export interface ScanJob {
   maxPages: number;
   enableAI: boolean;
   browsers: BrowserName[];
+  device?: string;
   runJourneys: boolean;
   status: ScanStatus;
   progress: number;

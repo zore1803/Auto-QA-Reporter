@@ -74,6 +74,88 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden relative;
   }
+}
+
+@layer utilities {
+  .neon-text {
+    text-shadow: 0 0 5px rgba(0, 245, 255, 0.5), 0 0 10px rgba(0, 245, 255, 0.3);
+  }
+  .neon-glow {
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.2), 0 0 30px rgba(0, 245, 255, 0.1);
+  }
+  .neon-border {
+    border-color: rgba(0, 245, 255, 0.5);
+    box-shadow: inset 0 0 10px rgba(0, 245, 255, 0.1), 0 0 10px rgba(0, 245, 255, 0.1);
+  }
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 245, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}
+
+.cyber-button {
+  @apply relative overflow-hidden transition-all duration-300 active:scale-95;
+}
+.cyber-button:hover {
+  @apply border-primary bg-primary/10;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2), 0 0 30px rgba(0, 245, 255, 0.1);
+  text-shadow: 0 0 8px rgba(0, 245, 255, 0.8);
+}
+.cyber-button::after {
+  content: '';
+  @apply absolute inset-0 bg-white/10 translate-x-[-100%] transition-transform duration-300;
+}
+.cyber-button:hover::after {
+  @apply translate-x-[100%];
+}
+
+.cyber-button-danger {
+  @apply relative overflow-hidden transition-all duration-300 active:scale-95 border-rose-500/30 text-rose-500/50;
+}
+.cyber-button-danger:hover {
+  @apply border-rose-500 bg-rose-500/10 text-rose-500;
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.3), 0 0 30px rgba(244, 63, 94, 0.1);
+  text-shadow: 0 0 8px rgba(244, 63, 94, 0.8);
+}
+.cyber-button-danger::after {
+  content: '';
+  @apply absolute inset-0 bg-white/5 translate-x-[-100%] transition-transform duration-300;
+}
+.cyber-button-danger:hover::after {
+  @apply translate-x-[100%];
+}
+
+.cyber-card {
+  @apply transition-all duration-300 border border-white/5 bg-white/[0.02];
+}
+.cyber-card:hover {
+  @apply border-primary/30 bg-white/[0.04] translate-y-[-2px];
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2), 0 0 30px rgba(0, 245, 255, 0.1);
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 245, 255, 0.05) 50%,
+    transparent
+  );
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 9999;
+  animation: scanline 8s linear infinite;
 }

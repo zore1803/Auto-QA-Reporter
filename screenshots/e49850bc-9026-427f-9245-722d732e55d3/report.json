@@ -1,0 +1,268 @@
+{
+  "jobId": "e49850bc-9026-427f-9245-722d732e55d3",
+  "targetUrl": "https://sanketzoreportfoli.vercel.app/about",
+  "scannedAt": "2026-03-28T05:42:21.373Z",
+  "totalPages": 5,
+  "scanDurationMs": 11638,
+  "summary": {
+    "totalBugs": 14,
+    "brokenLinks": 6,
+    "uiIssues": 8,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 43,
+    "severityCounts": {
+      "high": 2,
+      "medium": 7,
+      "low": 5
+    },
+    "newIssues": 13,
+    "fixedIssues": 0,
+    "repeatedIssues": 1
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://sanketzoreportfoli.vercel.app/about",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://sanketzoreportfoli.vercel.app/about\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://sanketzoreportfoli.vercel.app/experience",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://sanketzoreportfoli.vercel.app/experience\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://sanketzoreportfoli.vercel.app/projects",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://sanketzoreportfoli.vercel.app/projects\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://sanketzoreportfoli.vercel.app/contact",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://sanketzoreportfoli.vercel.app/contact\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://www.linkedin.com/in/sanketzore135",
+      "statusCode": 405,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 405 for \"https://www.linkedin.com/in/sanketzore135\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 405 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://sanketzoreportfoli.vercel.app",
+      "linkUrl": "https://drive.google.com/file/d/1Dm2WiZ0KJ5Z7VbZj0KufKmQIRgk_M7ax/view?usp=drive_link",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://drive.google.com/file/d/1Dm2WiZ0KJ5Z7VbZj0KufKmQIRgk_M7ax/view?usp=drive_link\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://sanketzoreportfoli.vercel.app/about",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://sanketzoreportfoli.vercel.app",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "div#root > div:nth-of-type(2) > header > nav > div > button",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "new"
+    },
+    {
+      "page": "https://sanketzoreportfoli.vercel.app",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 10 (href: \"https://github.com/SanketZore\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "div#root > div:nth-of-type(2) > div > section > div > div > div:nth-of-type(3) > a:nth-of-type(1)",
+      "boundingBox": {
+        "x": 580,
+        "y": 568,
+        "width": 24,
+        "height": 24
+      },
+      "occurrences": 6,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "new"
+    },
+    {
+      "page": "https://sanketzoreportfoli.vercel.app",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"3+\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "div#root > div:nth-of-type(2) > div > section > div > div > div:nth-of-type(4) > div:nth-of-type(1) > h3",
+      "boundingBox": {
+        "x": 273.83203125,
+        "y": 737,
+        "width": 113.6640625,
+        "height": 16
+      },
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "new"
+    },
+    {
+      "page": "https://sanketzoreportfoli.vercel.app",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: a and a at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "new"
+    },
+    {
+      "page": "https://sanketzoreportfoli.vercel.app/projects",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65,
+      "issueStatus": "new"
+    },
+    {
+      "page": "https://sanketzoreportfoli.vercel.app/experience",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65,
+      "issueStatus": "new"
+    },
+    {
+      "page": "https://sanketzoreportfoli.vercel.app/contact",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65,
+      "issueStatus": "new"
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://sanketzoreportfoli.vercel.app/about",
+      "title": "404: NOT_FOUND",
+      "statusCode": 404,
+      "screenshotFile": "e49850bc-9026-427f-9245-722d732e55d3_0_https___sanketzoreportfoli_vercel_app_about.png",
+      "loadTimeMs": 996,
+      "linksFound": 1,
+      "formsFound": 0
+    },
+    {
+      "url": "https://sanketzoreportfoli.vercel.app",
+      "title": "Sanket Ramesh Zore - Portfolio",
+      "statusCode": 200,
+      "screenshotFile": "e49850bc-9026-427f-9245-722d732e55d3_1_https___sanketzoreportfoli_vercel_app.png",
+      "loadTimeMs": 1069,
+      "linksFound": 18,
+      "formsFound": 0
+    },
+    {
+      "url": "https://sanketzoreportfoli.vercel.app/projects",
+      "title": "404: NOT_FOUND",
+      "statusCode": 404,
+      "screenshotFile": "e49850bc-9026-427f-9245-722d732e55d3_2_https___sanketzoreportfoli_vercel_app_projects.png",
+      "loadTimeMs": 624,
+      "linksFound": 1,
+      "formsFound": 0
+    },
+    {
+      "url": "https://sanketzoreportfoli.vercel.app/experience",
+      "title": "404: NOT_FOUND",
+      "statusCode": 404,
+      "screenshotFile": "e49850bc-9026-427f-9245-722d732e55d3_3_https___sanketzoreportfoli_vercel_app_experience.png",
+      "loadTimeMs": 610,
+      "linksFound": 1,
+      "formsFound": 0
+    },
+    {
+      "url": "https://sanketzoreportfoli.vercel.app/contact",
+      "title": "404: NOT_FOUND",
+      "statusCode": 404,
+      "screenshotFile": "e49850bc-9026-427f-9245-722d732e55d3_4_https___sanketzoreportfoli_vercel_app_contact.png",
+      "loadTimeMs": 599,
+      "linksFound": 1,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ],
+  "previousJobId": "ff159cc2-a0e8-4963-8fdb-ce862128e9ef"
+}

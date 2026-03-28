@@ -1,5 +1,4 @@
 import { Layers, Link2Off, LayoutTemplate, ShieldCheck, Route } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import type { ScanSummary } from "@workspace/api-client-react";
 
 interface SummaryCardsProps {
@@ -12,8 +11,8 @@ function HealthScoreRing({ score }: { score: number }) {
   const label = score >= 80 ? "Good" : score >= 50 ? "Fair" : "Poor";
   return (
     <div className="flex flex-col items-center justify-center">
-      <span className={`text-3xl font-bold tracking-tight ${color}`}>{score}</span>
-      <span className={`text-xs font-medium mt-0.5 ${color}`}>{label}</span>
+      <span className={`text-3xl font-mono font-bold tracking-tight ${color} neon-text`}>{score}</span>
+      <span className={`text-[10px] font-mono uppercase tracking-[0.2em] mt-0.5 ${color} opacity-80`}>{label}</span>
     </div>
   );
 }
@@ -63,25 +62,23 @@ export function SummaryCards({ summary, totalPages }: SummaryCardsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
       {cards.map((card) => (
-        <Card key={card.title} className="shadow-sm">
-          <CardContent className="p-6">
+        <div key={card.title} className="cyber-card p-6 flex flex-col justify-between">
             <div className="flex justify-between items-start">
               <div className="space-y-2">
-                <p className="text-sm font-medium text-muted-foreground">{card.title}</p>
+                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/30">{card.title}</p>
                 {card.custom ? (
                   card.custom
                 ) : (
-                  <p className={`text-3xl font-bold tracking-tight ${card.color}`}>
+                  <p className={`text-3xl font-mono font-bold tracking-tight ${card.color} neon-text`}>
                     {card.value}
                   </p>
                 )}
               </div>
-              <div className="p-2 bg-muted/50 rounded-md">
-                <card.icon className={`w-5 h-5 ${card.color}`} />
+              <div className="p-2 bg-white/5 border border-white/5 rounded">
+                <card.icon className={`w-4 h-4 ${card.color}`} />
               </div>
             </div>
-          </CardContent>
-        </Card>
+        </div>
       ))}
     </div>
   );

@@ -1,0 +1,56 @@
+﻿Starting test crawl for: https://sanketzoreportfoli.vercel.app/
+Crawling: https://sanketzoreportfoli.vercel.app
+Crawling: https://sanketzoreportfoli.vercel.app/about
+Crawling: https://sanketzoreportfoli.vercel.app/projects
+Crawling: https://sanketzoreportfoli.vercel.app/experience
+Crawling: https://sanketzoreportfoli.vercel.app/contact
+Crawl complete. Pages found: 5
+ - https://sanketzoreportfoli.vercel.app (Status: 200, Links found: 18)
+   Screenshot: test-job_0_https___sanketzoreportfoli_vercel_app.png
+ - https://sanketzoreportfoli.vercel.app/about (Status: 404, Links found: 1)
+   Screenshot: test-job_1_https___sanketzoreportfoli_vercel_app_about.png
+ - https://sanketzoreportfoli.vercel.app/projects (Status: 404, Links found: 1)
+   Screenshot: test-job_2_https___sanketzoreportfoli_vercel_app_projects.png
+ - https://sanketzoreportfoli.vercel.app/experience (Status: 404, Links found: 1)
+   Screenshot: test-job_3_https___sanketzoreportfoli_vercel_app_experience.png
+ - https://sanketzoreportfoli.vercel.app/contact (Status: 404, Links found: 1)
+   Screenshot: test-job_4_https___sanketzoreportfoli_vercel_app_contact.png
+
+Total links discovered for queue: 22
+  -> https://sanketzoreportfoli.vercel.app/
+  -> https://sanketzoreportfoli.vercel.app/
+  -> https://sanketzoreportfoli.vercel.app/about
+  -> https://sanketzoreportfoli.vercel.app/projects
+  -> https://sanketzoreportfoli.vercel.app/experience
+  -> https://sanketzoreportfoli.vercel.app/contact
+  -> https://sanketzoreportfoli.vercel.app/contact
+  -> https://sanketzoreportfoli.vercel.app/projects
+  -> https://drive.google.com/file/d/1Dm2WiZ0KJ5Z7VbZj0KufKmQIRgk_M7ax/view?usp=drive_link
+  -> https://github.com/SanketZore
+
+Running UI Inspection...
+[inspectUI] Browser launched
+[inspectUI] Page loaded: https://sanketzoreportfoli.vercel.app/projects
+[inspectUI] Page loaded: https://sanketzoreportfoli.vercel.app/contact
+[inspectUI] Page loaded: https://sanketzoreportfoli.vercel.app/about
+[inspectUI] https://sanketzoreportfoli.vercel.app/projects => 1 issues
+[inspectUI] https://sanketzoreportfoli.vercel.app/about => 1 issues
+[inspectUI] https://sanketzoreportfoli.vercel.app/contact => 1 issues
+[inspectUI] Page loaded: https://sanketzoreportfoli.vercel.app/experience
+[inspectUI] https://sanketzoreportfoli.vercel.app/experience => 1 issues
+[inspectUI] Page loaded: https://sanketzoreportfoli.vercel.app
+[inspectUI] https://sanketzoreportfoli.vercel.app => 9 issues
+UI Inspection complete. Issues found: 13
+ [High] Empty Button: Button 1 has no visible text and no aria-label attribute.
+ [Medium] Empty Link: Link 10 (href: "https://github.com/SanketZore") has no visible text and no aria-label.
+ [Medium] Empty Link: Link 11 (href: "https://www.linkedin.com/in/sanketzore135") has no visible text and no aria-label.
+ [Medium] Empty Link: Link 12 (href: "mailto:sanketzore348@gmail.com") has no visible text and no aria-label.
+ [Medium] Empty Link: Link 13 (href: "https://github.com/SanketZore") has no visible text and no aria-label.
+ [Medium] Empty Link: Link 14 (href: "https://www.linkedin.com/in/sanketzore135") has no visible text and no aria-label.
+ [Medium] Empty Link: Link 15 (href: "mailto:sanketzore348@gmail.com") has no visible text and no aria-label.
+ [Low] Heading Hierarchy Skip: Heading level jumps from H1 to H3. Heading text: "3+"
+ [High] Overlapping Interactive Elements: Two interactive elements overlap: a and a at 1280├ù800.
+ [Low] Missing Meta Description: This page has no <meta name="description"> tag (or the content is empty).
+ [Low] Missing Meta Description: This page has no <meta name="description"> tag (or the content is empty).
+ [Low] Missing Meta Description: This page has no <meta name="description"> tag (or the content is empty).
+ [Low] Missing Meta Description: This page has no <meta name="description"> tag (or the content is empty).

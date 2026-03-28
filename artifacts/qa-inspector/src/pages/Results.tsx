@@ -66,47 +66,49 @@ export function Results({ jobId, onReset, onRescan }: ResultsProps) {
   const summary = report.summary;
 
   return (
-    <div className="w-full max-w-6xl mx-auto mt-8 pb-24">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 pb-4 border-b">
-        <div>
-          <h1 className="text-3xl font-bold mb-2 tracking-tight">Inspection Report</h1>
-          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center text-foreground font-medium">
-              <Globe className="w-4 h-4 mr-2"/> {report.targetUrl}
+    <div className="w-full max-w-6xl mx-auto mt-8 pb-24 text-center">
+      <div className="flex flex-col items-center mb-6 pb-6 border-b border-white/5">
+        <div className="space-y-3">
+          <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-white/30">Step 3 of 3</p>
+          <h1 className="text-3xl font-mono font-bold text-white tracking-widest uppercase">
+            Inspection Report
+          </h1>
+          <div className="flex flex-wrap items-center justify-center gap-6 font-mono text-[10px] uppercase tracking-widest text-white/40">
+            <span className="flex items-center text-cyan-400 font-bold">
+              <Globe className="w-3.5 h-3.5 mr-2"/> {report.targetUrl}
             </span>
-            <span className="hidden md:inline text-border">|</span>
             <span>{new Date(report.scannedAt).toLocaleString()}</span>
-            <span className="hidden md:inline text-border">|</span>
             <span>Duration: {formatDuration(report.scanDurationMs)}</span>
           </div>
 
           {/* Browser badges */}
           {isMultiBrowser && (
-            <div className="flex items-center gap-2 mt-2">
-              <Monitor className="w-4 h-4 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">Tested in:</span>
-              {browsers.map((b) => (
-                <Badge key={b} variant="secondary" className="text-xs font-normal">
-                  {BROWSER_LABELS[b] ?? b}
-                </Badge>
-              ))}
+            <div className="flex items-center justify-center gap-3 mt-4 pt-4 border-t border-white/5">
+              <span className="text-[9px] text-white/20 uppercase tracking-[0.2em]">Tested in:</span>
+              <div className="flex gap-2">
+                {browsers.map((b) => (
+                  <span key={b} className="px-2 py-0.5 border border-white/10 bg-white/5 text-[9px] text-white/60 uppercase tracking-tighter">
+                    {BROWSER_LABELS[b] ?? b}
+                  </span>
+                ))}
+              </div>
             </div>
           )}
         </div>
 
-        <div className="flex items-center gap-2 mt-4 md:mt-0">
-          <Button
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <button
             onClick={() => onRescan(report.targetUrl)}
-            variant="outline"
-            size="sm"
-            className="flex items-center gap-2"
+            className="px-6 py-2 border border-cyan-500/30 text-cyan-400 font-mono text-[10px] uppercase tracking-[0.3em] hover:bg-cyan-500 hover:text-black transition-all shadow-[0_0_15px_rgba(6,182,212,0.1)] cyber-button"
           >
-            <RotateCcw className="w-4 h-4" />
-            Re-scan
-          </Button>
-          <Button onClick={onReset} variant="secondary" size="sm">
-            New Scan
-          </Button>
+            [ Re-scan ]
+          </button>
+          <button 
+            onClick={onReset} 
+            className="px-6 py-2 border border-white/10 text-white/40 font-mono text-[10px] uppercase tracking-[0.3em] hover:bg-white/5 hover:text-white transition-all cyber-button"
+          >
+            [ New Scan ]
+          </button>
         </div>
       </div>
 

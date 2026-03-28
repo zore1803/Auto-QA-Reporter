@@ -162,6 +162,16 @@ components:
         enableAI:
           type: boolean
           default: false
+        device:
+          type: string
+          description: "Device emulator config (e.g., 'iPhone 14')"
+        browsers:
+          type: array
+          items:
+            type: string
+        runJourneys:
+          type: boolean
+          default: false
       required:
         - url
 

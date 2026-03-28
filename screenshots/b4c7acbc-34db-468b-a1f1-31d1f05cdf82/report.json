@@ -1,0 +1,38 @@
+{
+  "jobId": "b4c7acbc-34db-468b-a1f1-31d1f05cdf82",
+  "targetUrl": "https://www.irctc.co.in/nget/train-search",
+  "scannedAt": "2026-03-28T05:41:54.634Z",
+  "totalPages": 1,
+  "scanDurationMs": 4905,
+  "summary": {
+    "totalBugs": 0,
+    "brokenLinks": 0,
+    "uiIssues": 0,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 100,
+    "severityCounts": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "brokenLinks": [],
+  "uiIssues": [],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://www.irctc.co.in/nget/train-search",
+      "title": "Error: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.irctc.co.in/nget/train-search\nCall log:\n\u001b[2m",
+      "statusCode": 0,
+      "loadTimeMs": 2853,
+      "linksFound": 0,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ]
+}

@@ -20,20 +20,8 @@ export function ReportExporter({ jobId, report }: ReportExporterProps) {
   const { toast } = useToast();
   const [copied, setCopied] = useState(false);
   const [pdfLoading, setPdfLoading] = useState(false);
-  const [open, setOpen] = useState(false);
-  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const handleMouseEnter = () => {
-    if (closeTimer.current) clearTimeout(closeTimer.current);
-    setOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    closeTimer.current = setTimeout(() => setOpen(false), 120);
-  };
 
   const handleDownloadJSON = () => {
-    setOpen(false);
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
     const a = document.createElement('a');
     a.setAttribute("href", dataStr);
@@ -45,13 +33,11 @@ export function ReportExporter({ jobId, report }: ReportExporterProps) {
   };
 
   const handleDownloadHTML = () => {
-    setOpen(false);
     window.open(`/api/scan/${jobId}/export/html`, '_blank');
     toast({ title: "Opened", description: "HTML report opened in new tab." });
   };
 
   const handleDownloadPDF = async () => {
-    setOpen(false);
     setPdfLoading(true);
     toast({ title: "Generating PDF", description: "This may take a few seconds..." });
 
@@ -91,15 +77,13 @@ export function ReportExporter({ jobId, report }: ReportExporterProps) {
   };
 
   return (
-    <div className="flex items-center gap-3 mt-12 pt-8 border-t">
-      <DropdownMenu open={open} onOpenChange={setOpen}>
+    <div className="flex items-center gap-3 mt-12 pt-8 border-t border-white/10">
+      <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
             variant="outline"
-            className="gap-2"
+            className="gap-2 cyber-button"
             disabled={pdfLoading}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
           >
             {pdfLoading ? (
               <Loader2 className="w-4 h-4 animate-spin" />
@@ -112,8 +96,6 @@ export function ReportExporter({ jobId, report }: ReportExporterProps) {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="start"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
           <DropdownMenuItem onClick={handleDownloadPDF} className="gap-2 cursor-pointer">
             <FileText className="w-4 h-4" />
@@ -131,7 +113,7 @@ export function ReportExporter({ jobId, report }: ReportExporterProps) {
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <Button onClick={handleCopyLink} variant="secondary" className="gap-2 ml-auto">
+      <Button onClick={handleCopyLink} variant="secondary" className="gap-2 ml-auto cyber-button">
         {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
         Copy Link
       </Button>

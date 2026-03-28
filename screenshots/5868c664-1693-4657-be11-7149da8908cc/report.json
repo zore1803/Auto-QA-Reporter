@@ -1,0 +1,96 @@
+{
+  "jobId": "5868c664-1693-4657-be11-7149da8908cc",
+  "targetUrl": "https://chatgpt.com/",
+  "scannedAt": "2026-03-28T07:29:51.157Z",
+  "totalPages": 1,
+  "scanDurationMs": 38032,
+  "summary": {
+    "totalBugs": 4,
+    "brokenLinks": 1,
+    "uiIssues": 3,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 71,
+    "severityCounts": {
+      "high": 2,
+      "medium": 1,
+      "low": 1
+    }
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://chatgpt.com",
+      "linkUrl": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/pat/9e34ed1c8d4c2e47/1774682992404/5eea48f79c5ffdc86fa9b8c42a1008cb519693d05a7778fd57111c942013a986/4Iehs2piz3I5cuK",
+      "statusCode": 401,
+      "statusType": "Client Error",
+      "error": "Resource failed to load (fetch)"
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://chatgpt.com",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://chatgpt.com",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"file\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#upload-files",
+      "browsers": [
+        "firefox",
+        "webkit"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://chatgpt.com",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: a and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "firefox",
+        "webkit"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://chatgpt.com",
+      "title": "Just a moment...",
+      "statusCode": 403,
+      "screenshotFile": "5868c664-1693-4657-be11-7149da8908cc_0_https___chatgpt_com.png",
+      "loadTimeMs": 10305,
+      "linksFound": 0,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ]
+}

@@ -1,4 +1,4 @@
-import { chromium } from 'playwright';
+import { chromium, devices } from 'playwright';
 import type { FormIssue } from './types.js';
 import { playwrightEnv } from './playwright-env.js';
 
@@ -13,7 +13,7 @@ const XSS_STRINGS = [
   '"><script>alert(1)</script>',
 ];
 
-export async function testForms(pages: Array<{ url: string }>): Promise<FormIssue[]> {
+export async function testForms(pages: Array<{ url: string }>, device?: string): Promise<FormIssue[]> {
   const issues: FormIssue[] = [];
 
   let browser = null;
@@ -22,7 +22,10 @@ export async function testForms(pages: Array<{ url: string }>): Promise<FormIssu
       headless: true,
       env: playwrightEnv(),
     });
-    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const deviceConfig = device && devices[device] 
+      ? { ...devices[device], deviceScaleFactor: 1 } 
+      : { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 };
+    const context = await browser.newContext(deviceConfig);
 
     // Inject __name shim to prevent esbuild-injected helper errors in browser context
     await context.addInitScript(() => {
@@ -34,7 +37,7 @@ export async function testForms(pages: Array<{ url: string }>): Promise<FormIssu
       const pageIssues: FormIssue[] = [];
       const page = await context.newPage();
       try {
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 8000 });
 
         const formData = await page.evaluate(() => {
           // Robust absolute CSS path generator
@@ -125,7 +128,7 @@ export async function testForms(pages: Array<{ url: string }>): Promise<FormIssu
           // Test 1: Empty form submission
           const emptyPage = await context.newPage();
           try {
-            await emptyPage.goto(url, { waitUntil: 'domcontentloaded', timeout: 10000 });
+            await emptyPage.goto(url, { waitUntil: 'domcontentloaded', timeout: 6000 });
             const formEl = await emptyPage.$(formSelector);
             if (formEl) {
                await formEl.evaluate((f: HTMLFormElement) => {

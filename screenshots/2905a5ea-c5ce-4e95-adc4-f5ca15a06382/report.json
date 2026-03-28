@@ -1,0 +1,57 @@
+{
+  "jobId": "2905a5ea-c5ce-4e95-adc4-f5ca15a06382",
+  "targetUrl": "https://sanketzoreportfoli.vercel.app/about",
+  "scannedAt": "2026-03-28T04:49:54.174Z",
+  "totalPages": 1,
+  "scanDurationMs": 7797,
+  "summary": {
+    "totalBugs": 1,
+    "brokenLinks": 0,
+    "uiIssues": 1,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 99,
+    "severityCounts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "newIssues": 0,
+    "fixedIssues": 0,
+    "repeatedIssues": 1
+  },
+  "brokenLinks": [],
+  "uiIssues": [
+    {
+      "page": "https://sanketzoreportfoli.vercel.app/about",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65,
+      "issueStatus": "repeated"
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://sanketzoreportfoli.vercel.app/about",
+      "title": "404: NOT_FOUND",
+      "statusCode": 404,
+      "screenshotFile": "2905a5ea-c5ce-4e95-adc4-f5ca15a06382_0_https___sanketzoreportfoli_vercel_app_about.png",
+      "loadTimeMs": 922,
+      "linksFound": 1,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ],
+  "previousJobId": "127d60cc-9520-420f-8888-ff80a7768dfb"
+}

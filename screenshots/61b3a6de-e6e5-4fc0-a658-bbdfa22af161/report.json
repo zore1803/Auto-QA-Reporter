@@ -1,0 +1,122 @@
+{
+  "jobId": "61b3a6de-e6e5-4fc0-a658-bbdfa22af161",
+  "targetUrl": "https://claude.ai/",
+  "scannedAt": "2026-03-28T09:19:53.044Z",
+  "totalPages": 1,
+  "scanDurationMs": 40404,
+  "summary": {
+    "totalBugs": 5,
+    "brokenLinks": 1,
+    "uiIssues": 4,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 75,
+    "severityCounts": {
+      "high": 1,
+      "medium": 3,
+      "low": 1
+    }
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://claude.ai",
+      "linkUrl": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/pat/9e358e528f054199/1774689595572/7a17ef67a6634b3de54ffbc0f9aa019c98f762c3ef3da208b65d07b4e4abd390/K_i8U2L342-LQB-",
+      "statusCode": 401,
+      "statusType": "Client Error",
+      "error": "Resource failed to load (fetch)"
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://claude.ai",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium",
+        "webkit"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://claude.ai",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 2 (src: \"https://claude.ai/images/crochet/browser.png\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "div#root > div:nth-of-type(1) > div > div > div:nth-of-type(2) > main > div:nth-of-type(2) > div > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(3) > div > div > div:nth-of-type(2) > a:nth-of-type(2) > div > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 1047.5166015625,
+        "y": 401,
+        "width": 22,
+        "height": 22
+      },
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://claude.ai",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"https://claude.ai/login#\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "div#root > div:nth-of-type(1) > div > div > nav > div > div:nth-of-type(1) > a",
+      "boundingBox": {
+        "x": 59.48333740234375,
+        "y": 0,
+        "width": 120,
+        "height": 84
+      },
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://claude.ai",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and a at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://claude.ai",
+      "title": "Just a moment...",
+      "statusCode": 403,
+      "screenshotFile": "61b3a6de-e6e5-4fc0-a658-bbdfa22af161_0_https___claude_ai.png",
+      "loadTimeMs": 10659,
+      "linksFound": 2,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ]
+}

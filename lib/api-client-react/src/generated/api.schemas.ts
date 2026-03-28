@@ -22,6 +22,7 @@ export interface ScanRequest {
   maxPages?: number;
   enableAI?: boolean;
   browsers?: BrowserName[];
+  device?: string;
   runJourneys?: boolean;
 }
 
@@ -197,6 +198,7 @@ export interface ScanReport {
   journeyResults?: JourneyResult[];
   pagesScanned: PageScanned[];
   browsers: BrowserName[];
+  device?: string;
   previousJobId?: string;
 }
 

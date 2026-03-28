@@ -1,0 +1,1147 @@
+{
+  "jobId": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01",
+  "targetUrl": "https://animewatchtv.su/",
+  "scannedAt": "2026-03-28T05:46:14.159Z",
+  "totalPages": 20,
+  "scanDurationMs": 114559,
+  "summary": {
+    "totalBugs": 62,
+    "brokenLinks": 2,
+    "uiIssues": 42,
+    "formIssues": 18,
+    "journeyIssues": 0,
+    "healthScore": 0,
+    "severityCounts": {
+      "high": 20,
+      "medium": 30,
+      "low": 12
+    }
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "linkUrl": "https://animewatchtv.su/wp-admin/admin-ajax.php?action=zenime_cache&t=eyJpZCI6Imp1anV0c3Uta2Fpc2VuLXRoZS1jdWxsaW5nLWdhbWUtcGFydC0xLTIwNDAxIiwiZXAiOiIxNjgwODIiLCJ0cyI6MTc3NDY3NTQ0N30&s=217c78ec478e60b63d6bfe7da0fa5416e797c7dda2c0920498e1234702dde27f",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "error": "Resource failed to load (fetch)"
+    },
+    {
+      "sourcePage": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "linkUrl": "https://animewatchtv.su/wp-admin/admin-ajax.php?action=zenime_cache&t=eyJpZCI6ImhlbGxzLXBhcmFkaXNlLXNlYXNvbi0yLTIwNDA1IiwiZXAiOiIxNjgzMjIiLCJ0cyI6MTc3NDY3NTQyOX0&s=4f45a25be3a27920a9d449734717165f44748e36c7a0d2ae522c7cb0194ef9b7",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "error": "Resource failed to load (fetch)"
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://animewatchtv.su",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 58 (src: \"https://animewatchtv.su/wp-content/uploads/2025/10/ani-watchtv-logo.webp\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "footer#colophon > div > div > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 564.125,
+        "y": 1884.28125,
+        "width": 151.75,
+        "height": 50
+      },
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"On-Air Anime\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "div#sidebar > div:nth-of-type(2) > div:nth-of-type(1) > h3",
+      "boundingBox": {
+        "x": 906,
+        "y": 317,
+        "width": 98.6875,
+        "height": 20
+      },
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 5 (src: \"https://i1.wp.com/animewatchtv.su/wp-content/uploads/2026/01/jujutsu-kaisen-shim\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "article#post-7906 > div:nth-of-type(5) > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 65,
+        "y": 1149.875,
+        "width": 150,
+        "height": 212.546875
+      },
+      "occurrences": 7,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span:nth-of-type(2) > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 5,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://animewatchtv.su/hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing-episode-12-english-subbed",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 5 (src: \"https://i0.wp.com/animewatchtv.su/wp-content/uploads/2026/01/hell-mode-yarikomiz\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "article#post-28011 > div:nth-of-type(5) > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 65,
+        "y": 1150.375,
+        "width": 150,
+        "height": 212.546875
+      },
+      "occurrences": 7,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing-episode-12-english-subbed",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span:nth-of-type(2) > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing-episode-12-english-subbed",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 5,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing-episode-12-english-subbed",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 5 (src: \"https://i2.wp.com/animewatchtv.su/wp-content/uploads/2026/01/jigokuraku-2nd-seas\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "article#post-6967 > div:nth-of-type(5) > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 65,
+        "y": 1128.875,
+        "width": 150,
+        "height": 212.546875
+      },
+      "occurrences": 7,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span:nth-of-type(2) > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 5,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://animewatchtv.su/fire-force-season-3-part-2-episode-12-english-subbed",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 5 (src: \"https://i3.wp.com/animewatchtv.su/wp-content/uploads/2026/01/enen-no-shouboutai-\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "article#post-28015 > div:nth-of-type(5) > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 65,
+        "y": 1086.875,
+        "width": 150,
+        "height": 212.546875
+      },
+      "occurrences": 7,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/fire-force-season-3-part-2-episode-12-english-subbed",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span:nth-of-type(2) > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/fire-force-season-3-part-2-episode-12-english-subbed",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 5,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/fire-force-season-3-part-2-episode-12-english-subbed",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://animewatchtv.su/frieren-beyond-journeys-end-season-2-episode-10-english-subbed",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 5 (src: \"https://i3.wp.com/animewatchtv.su/wp-content/uploads/2026/01/sousou-no-frieren-2\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "article#post-28008 > div:nth-of-type(5) > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 65,
+        "y": 1107.875,
+        "width": 150,
+        "height": 212.546875
+      },
+      "occurrences": 7,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/frieren-beyond-journeys-end-season-2-episode-10-english-subbed",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span:nth-of-type(2) > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/frieren-beyond-journeys-end-season-2-episode-10-english-subbed",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 5,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/frieren-beyond-journeys-end-season-2-episode-10-english-subbed",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://animewatchtv.su/anime/?status=&type=&order=update",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 3 (src: \"https://i1.wp.com/animewatchtv.su/wp-content/uploads/2026/03/yu-ling-shi.jpg?res\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "div#content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > article:nth-of-type(1) > div > a > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 67,
+        "y": 299,
+        "width": 147.1875,
+        "height": 208.5625
+      },
+      "occurrences": 21,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/anime/?status=&type=&order=update",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span:nth-of-type(2) > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/anime/?status=&type=&order=update",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/anime/?status=&type=&order=update",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    },
+    {
+      "page": "https://animewatchtv.su/anime/?status=&type=&order=update",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://animewatchtv.su/b-king-episode-7-english-subbed",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 5 (src: \"https://i1.wp.com/animewatchtv.su/wp-content/uploads/2026/03/yu-ling-shi.jpg?res\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "article#post-28019 > div:nth-of-type(5) > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 65,
+        "y": 1086.875,
+        "width": 150,
+        "height": 212.546875
+      },
+      "occurrences": 7,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/b-king-episode-7-english-subbed",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span:nth-of-type(2) > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/b-king-episode-7-english-subbed",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 5,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/b-king-episode-7-english-subbed",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://animewatchtv.su/high-school-kimengumi-2026-episode-12-english-subbed",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 3 (src: \"https://i3.wp.com/animewatchtv.su/wp-content/uploads/2026/01/high-school-kimengu\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "article#post-28018 > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > img",
+      "occurrences": 8,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/high-school-kimengumi-2026-episode-12-english-subbed",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span:nth-of-type(2) > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/high-school-kimengumi-2026-episode-12-english-subbed",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 5,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/high-school-kimengumi-2026-episode-12-english-subbed",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://animewatchtv.su/himitsu-no-aipri-ring-hen-episode-50-english-subbed",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 3 (src: \"https://i3.wp.com/animewatchtv.su/wp-content/uploads/2025/10/himitsu-no-aipri-ri\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "article#post-28017 > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > img",
+      "occurrences": 8,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/himitsu-no-aipri-ring-hen-episode-50-english-subbed",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 2 (href: \"https://animewatchtv.su/\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "html > body > div:nth-of-type(2) > div > header > div > span:nth-of-type(2) > a",
+      "occurrences": 31,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/himitsu-no-aipri-ring-hen-episode-50-english-subbed",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "input#s",
+      "boundingBox": {
+        "x": 186.21875,
+        "y": 13,
+        "width": 350,
+        "height": 34
+      },
+      "occurrences": 5,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://animewatchtv.su/himitsu-no-aipri-ring-hen-episode-50-english-subbed",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    }
+  ],
+  "formIssues": [
+    {
+      "page": "https://animewatchtv.su",
+      "formSelector": "div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 467 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "formSelector": "div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 467 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "formSelector": "div#vir-modal-auto > div:nth-of-type(2) > form",
+      "issueType": "Missing Validation on Empty Submit",
+      "description": "Form \"div#vir-modal-auto > div:nth-of-type(2) > form\" has required fields but does not display browser-native or custom validation messages when submitted empty.",
+      "impact": "Users who submit the form without filling required fields receive no feedback.",
+      "recommendation": "Add the required attribute to mandatory inputs so browsers show built-in validation messages.",
+      "severity": "Medium",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "page": "https://animewatchtv.su/hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing-episode-12-english-subbed",
+      "formSelector": "div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 467 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing-episode-12-english-subbed",
+      "formSelector": "div#vir-modal-auto > div:nth-of-type(2) > form",
+      "issueType": "Missing Validation on Empty Submit",
+      "description": "Form \"div#vir-modal-auto > div:nth-of-type(2) > form\" has required fields but does not display browser-native or custom validation messages when submitted empty.",
+      "impact": "Users who submit the form without filling required fields receive no feedback.",
+      "recommendation": "Add the required attribute to mandatory inputs so browsers show built-in validation messages.",
+      "severity": "Medium",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "page": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "formSelector": "div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 467 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "formSelector": "div#vir-modal-auto > div:nth-of-type(2) > form",
+      "issueType": "Missing Validation on Empty Submit",
+      "description": "Form \"div#vir-modal-auto > div:nth-of-type(2) > form\" has required fields but does not display browser-native or custom validation messages when submitted empty.",
+      "impact": "Users who submit the form without filling required fields receive no feedback.",
+      "recommendation": "Add the required attribute to mandatory inputs so browsers show built-in validation messages.",
+      "severity": "Medium",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "page": "https://animewatchtv.su/fire-force-season-3-part-2-episode-12-english-subbed",
+      "formSelector": "div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 467 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/fire-force-season-3-part-2-episode-12-english-subbed",
+      "formSelector": "div#vir-modal-auto > div:nth-of-type(2) > form",
+      "issueType": "Missing Validation on Empty Submit",
+      "description": "Form \"div#vir-modal-auto > div:nth-of-type(2) > form\" has required fields but does not display browser-native or custom validation messages when submitted empty.",
+      "impact": "Users who submit the form without filling required fields receive no feedback.",
+      "recommendation": "Add the required attribute to mandatory inputs so browsers show built-in validation messages.",
+      "severity": "Medium",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "page": "https://animewatchtv.su/frieren-beyond-journeys-end-season-2-episode-10-english-subbed",
+      "formSelector": "div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 467 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/frieren-beyond-journeys-end-season-2-episode-10-english-subbed",
+      "formSelector": "div#vir-modal-auto > div:nth-of-type(2) > form",
+      "issueType": "Missing Validation on Empty Submit",
+      "description": "Form \"div#vir-modal-auto > div:nth-of-type(2) > form\" has required fields but does not display browser-native or custom validation messages when submitted empty.",
+      "impact": "Users who submit the form without filling required fields receive no feedback.",
+      "recommendation": "Add the required attribute to mandatory inputs so browsers show built-in validation messages.",
+      "severity": "Medium",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "page": "https://animewatchtv.su/anime/?status=&type=&order=update",
+      "formSelector": "div#content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#content > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 471 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/b-king-episode-7-english-subbed",
+      "formSelector": "div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 467 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/b-king-episode-7-english-subbed",
+      "formSelector": "div#vir-modal-auto > div:nth-of-type(2) > form",
+      "issueType": "Missing Validation on Empty Submit",
+      "description": "Form \"div#vir-modal-auto > div:nth-of-type(2) > form\" has required fields but does not display browser-native or custom validation messages when submitted empty.",
+      "impact": "Users who submit the form without filling required fields receive no feedback.",
+      "recommendation": "Add the required attribute to mandatory inputs so browsers show built-in validation messages.",
+      "severity": "Medium",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "page": "https://animewatchtv.su/high-school-kimengumi-2026-episode-12-english-subbed",
+      "formSelector": "div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 467 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/high-school-kimengumi-2026-episode-12-english-subbed",
+      "formSelector": "div#vir-modal-auto > div:nth-of-type(2) > form",
+      "issueType": "Missing Validation on Empty Submit",
+      "description": "Form \"div#vir-modal-auto > div:nth-of-type(2) > form\" has required fields but does not display browser-native or custom validation messages when submitted empty.",
+      "impact": "Users who submit the form without filling required fields receive no feedback.",
+      "recommendation": "Add the required attribute to mandatory inputs so browsers show built-in validation messages.",
+      "severity": "Medium",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "page": "https://animewatchtv.su/himitsu-no-aipri-ring-hen-episode-50-english-subbed",
+      "formSelector": "div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"div#sidebar > div:nth-of-type(1) > div:nth-of-type(1) > form\" has 467 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://animewatchtv.su/himitsu-no-aipri-ring-hen-episode-50-english-subbed",
+      "formSelector": "div#vir-modal-auto > div:nth-of-type(2) > form",
+      "issueType": "Missing Validation on Empty Submit",
+      "description": "Form \"div#vir-modal-auto > div:nth-of-type(2) > form\" has required fields but does not display browser-native or custom validation messages when submitted empty.",
+      "impact": "Users who submit the form without filling required fields receive no feedback.",
+      "recommendation": "Add the required attribute to mandatory inputs so browsers show built-in validation messages.",
+      "severity": "Medium",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    }
+  ],
+  "journeyIssues": [],
+  "journeyResults": [
+    {
+      "journeyType": "search",
+      "page": "https://animewatchtv.su",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://animewatchtv.su/hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing-episode-12-english-subbed",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://animewatchtv.su/hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing-episode-12-english-subbed",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://animewatchtv.su/fire-force-season-3-part-2-episode-12-english-subbed",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://animewatchtv.su/fire-force-season-3-part-2-episode-12-english-subbed",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    }
+  ],
+  "pagesScanned": [
+    {
+      "url": "https://animewatchtv.su",
+      "title": "Aniwatch | Watch Anime Online with English Sub and Dub",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_0_https___animewatchtv_su.png",
+      "loadTimeMs": 2443,
+      "linksFound": 180,
+      "formsFound": 2
+    },
+    {
+      "url": "https://animewatchtv.su/jujutsu-kaisen-the-culling-game-part-1-episode-10-english-subbed",
+      "title": "Jujutsu Kaisen: The Culling Game Part 1 Episode 10 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_1_https___animewatchtv_su_jujutsu_kaisen_the_culling_game_part_1_episode_10_englis.png",
+      "loadTimeMs": 11234,
+      "linksFound": 175,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/hell-mode-the-hardcore-gamer-dominates-in-another-world-with-garbage-balancing-episode-12-english-subbed",
+      "title": "Hell Mode: The Hardcore Gamer Dominates in Another World with Garbage Balancing Episode 12 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_2_https___animewatchtv_su_hell_mode_the_hardcore_gamer_dominates_in_another_world_.png",
+      "loadTimeMs": 11221,
+      "linksFound": 173,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/hells-paradise-season-2-episode-9-english-subbed",
+      "title": "Hell's Paradise Season 2 Episode 9 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_3_https___animewatchtv_su_hells_paradise_season_2_episode_9_english_subbed.png",
+      "loadTimeMs": 11287,
+      "linksFound": 176,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/fire-force-season-3-part-2-episode-12-english-subbed",
+      "title": "Fire Force Season 3 Part 2 Episode 12 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_4_https___animewatchtv_su_fire_force_season_3_part_2_episode_12_english_subbed.png",
+      "loadTimeMs": 11270,
+      "linksFound": 176,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/frieren-beyond-journeys-end-season-2-episode-10-english-subbed",
+      "title": "Frieren: Beyond Journey's End Season 2 Episode 10 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_5_https___animewatchtv_su_frieren_beyond_journeys_end_season_2_episode_10_english_.png",
+      "loadTimeMs": 11653,
+      "linksFound": 173,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/anime/?status=&type=&order=update",
+      "title": "Series Archive - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_6_https___animewatchtv_su_anime__status__type__order_update.png",
+      "loadTimeMs": 2193,
+      "linksFound": 174,
+      "formsFound": 2
+    },
+    {
+      "url": "https://animewatchtv.su/b-king-episode-7-english-subbed",
+      "title": "B.King Episode 7 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_7_https___animewatchtv_su_b_king_episode_7_english_subbed.png",
+      "loadTimeMs": 11615,
+      "linksFound": 170,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/high-school-kimengumi-2026-episode-12-english-subbed",
+      "title": "High School! Kimengumi (2026) Episode 12 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_8_https___animewatchtv_su_high_school_kimengumi_2026_episode_12_english_subbed.png",
+      "loadTimeMs": 11650,
+      "linksFound": 172,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/himitsu-no-aipri-ring-hen-episode-50-english-subbed",
+      "title": "Himitsu no AiPri: Ring-hen Episode 50 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_9_https___animewatchtv_su_himitsu_no_aipri_ring_hen_episode_50_english_subbed.png",
+      "loadTimeMs": 11637,
+      "linksFound": 173,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/dark-moon-the-blood-altar-episode-12-english-subbed",
+      "title": "Dark Moon: The Blood Altar Episode 12 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_10_https___animewatchtv_su_dark_moon_the_blood_altar_episode_12_english_subbed.png",
+      "loadTimeMs": 11444,
+      "linksFound": 174,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/the-outcast-6-episode-13-english-subbed",
+      "title": "The Outcast 6 Episode 13 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_11_https___animewatchtv_su_the_outcast_6_episode_13_english_subbed.png",
+      "loadTimeMs": 11179,
+      "linksFound": 172,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/beyblade-x-episode-121-english-subbed",
+      "title": "Beyblade X Episode 121 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_12_https___animewatchtv_su_beyblade_x_episode_121_english_subbed.png",
+      "loadTimeMs": 11275,
+      "linksFound": 167,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/anyway-im-falling-in-love-with-you-season-2-episode-12-english-subbed",
+      "title": "Anyway, I'm Falling in Love with You. Season 2 Episode 12 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_13_https___animewatchtv_su_anyway_im_falling_in_love_with_you_season_2_episode_12_e.png",
+      "loadTimeMs": 11159,
+      "linksFound": 172,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/tamon-kun-ima-docchi-episode-13-english-subbed",
+      "title": "Tamon-kun Ima Docchi!? Episode 13 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_14_https___animewatchtv_su_tamon_kun_ima_docchi_episode_13_english_subbed.png",
+      "loadTimeMs": 11520,
+      "linksFound": 172,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/roll-over-and-die-episode-12-english-subbed",
+      "title": "Roll Over and Die Episode 12 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_15_https___animewatchtv_su_roll_over_and_die_episode_12_english_subbed.png",
+      "loadTimeMs": 8813,
+      "linksFound": 174,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/the-invisible-man-and-his-soon-to-be-wife-episode-12-english-subbed",
+      "title": "The Invisible Man and His Soon-to-Be Wife Episode 12 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_16_https___animewatchtv_su_the_invisible_man_and_his_soon_to_be_wife_episode_12_eng.png",
+      "loadTimeMs": 8282,
+      "linksFound": 172,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/the-holy-grail-of-eris-episode-12-english-subbed",
+      "title": "The Holy Grail of Eris Episode 12 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_17_https___animewatchtv_su_the_holy_grail_of_eris_episode_12_english_subbed.png",
+      "loadTimeMs": 11550,
+      "linksFound": 172,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/mf-ghost-season-3-episode-13-english-subbed",
+      "title": "MF Ghost Season 3 Episode 13 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_18_https___animewatchtv_su_mf_ghost_season_3_episode_13_english_subbed.png",
+      "loadTimeMs": 11532,
+      "linksFound": 171,
+      "formsFound": 4
+    },
+    {
+      "url": "https://animewatchtv.su/bang-dream-chan-episode-25-english-subbed",
+      "title": "BanG Dream-chan Episode 25 English Subbed - Aniwatch",
+      "statusCode": 200,
+      "screenshotFile": "7a96fbe7-e5d7-4e5c-99e0-af4fbb8e4c01_19_https___animewatchtv_su_bang_dream_chan_episode_25_english_subbed.png",
+      "loadTimeMs": 6548,
+      "linksFound": 168,
+      "formsFound": 4
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ]
+}

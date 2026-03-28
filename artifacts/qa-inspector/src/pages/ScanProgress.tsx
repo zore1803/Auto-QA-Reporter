@@ -14,6 +14,7 @@ interface ScanProgressProps {
 export function ScanProgress({ jobId, onScanComplete, onCancel }: ScanProgressProps) {
   const { data: status } = useGetScanStatus(jobId, {
     query: {
+      queryKey: ["getScanStatus", jobId],
       refetchInterval: (query) => {
         const state = query.state.data?.status;
         return state === "completed" || state === "failed" ? false : 2000;
@@ -36,6 +37,7 @@ export function ScanProgress({ jobId, onScanComplete, onCancel }: ScanProgressPr
       }, 1000);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [status?.status, onScanComplete]);
 
   const progress = status?.progress || 0;
@@ -72,69 +74,113 @@ export function ScanProgress({ jobId, onScanComplete, onCancel }: ScanProgressPr
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto mt-12">
-      <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold mb-2 tracking-tight">Scanning...</h2>
-        <p className="text-muted-foreground font-mono text-sm">{status?.currentUrl || "Initializing..."}</p>
+    <div className="w-full max-w-2xl mx-auto px-4 py-12 animate-fade-in flex flex-col">
+      {/* ── Scanning Header ── */}
+      <div className="mb-10 space-y-1 text-center">
+        <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-cyan-500/50">Step 2 of 3</p>
+        <h2 className="text-2xl font-mono font-bold text-white tracking-widest uppercase flex items-center justify-center gap-3">
+          Scanning Ecosystem
+          <RefreshCcw className="w-4 h-4 text-cyan-500 animate-spin" />
+        </h2>
+        <p className="text-white/40 text-[10px] font-mono uppercase tracking-widest truncate">
+          Target: {status?.currentUrl || "Initializing targets..."}
+        </p>
       </div>
 
-      <Card>
-        <CardContent className="p-6">
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm font-medium">
-                <span className="capitalize">{status?.currentStep || "Booting"}</span>
-                <span>{Math.round(progress)}%</span>
+      <Card className="bg-[#0a0a0f] border-white/10 rounded-none shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden">
+        <CardContent className="p-0">
+          {/* Main Progress Bar Area */}
+          <div className="p-8 space-y-8 border-b border-white/5">
+            <div className="space-y-4">
+              <div className="flex justify-between items-end font-mono">
+                <div className="space-y-1">
+                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30">
+                    Process Status
+                  </p>
+                  <p className="text-sm font-bold text-white uppercase tracking-widest">
+                    {status?.currentStep || "Initializing"}
+                  </p>
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold text-cyan-400 tabular-nums">
+                    {Math.round(progress)}%
+                  </p>
+                </div>
               </div>
-              <div className="h-2 w-full bg-secondary rounded-full overflow-hidden">
+              
+              <div className="h-6 w-full bg-black border border-white/10 p-1">
                 <div 
-                  className="h-full bg-primary transition-all duration-500 ease-out rounded-full"
+                  className="h-full bg-cyan-500 transition-all duration-700 ease-out shadow-[0_0_20px_rgba(6,182,212,0.6)] animate-pulse"
                   style={{ width: `${progress}%` }}
                 ></div>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t">
-              {steps.map((step, idx) => (
-                <div key={idx} className="flex items-center space-x-3 text-sm">
-                  {step.status === "completed" ? (
-                    <CheckSquare className="w-4 h-4 text-primary" />
-                  ) : step.status === "running" ? (
-                    <RefreshCcw className="w-4 h-4 text-muted-foreground animate-spin" />
-                  ) : step.status === "failed" ? (
-                    <AlertTriangle className="w-4 h-4 text-destructive" />
-                  ) : (
-                    <Square className="w-4 h-4 text-muted-foreground/30" />
-                  )}
-                  
-                  <span className={cn(
-                    "transition-colors",
-                    step.status === "completed" ? "text-foreground" :
-                    step.status === "running" ? "text-foreground font-medium" :
-                    step.status === "failed" ? "text-destructive" :
-                    "text-muted-foreground"
+            {/* Steps Grid (Cyberpunk List) */}
+            <div className="grid grid-cols-1 gap-2">
+              {steps.map((step, idx) => {
+                const isActive = step.status === "running";
+                const isDone = step.status === "completed";
+                const isFailed = step.status === "failed";
+                
+                return (
+                  <div key={idx} className={cn(
+                    "flex items-center justify-between p-3 border border-white/5 bg-white/[0.02] transition-opacity",
+                    isActive ? "opacity-100 border-cyan-500/30" : "opacity-30"
                   )}>
-                    {step.label}
-                  </span>
-                </div>
-              ))}
+                    <div className="flex items-center gap-3">
+                       <div className={cn(
+                        "w-4 h-4 flex items-center justify-center border",
+                        isDone ? "bg-emerald-500 border-emerald-500" : 
+                        isActive ? "bg-cyan-500/20 border-cyan-500 animate-pulse" :
+                        isFailed ? "bg-rose-500 border-rose-500" :
+                        "border-white/20"
+                      )}>
+                        {isDone && <CheckSquare className="w-3 h-3 text-black" />}
+                        {isActive && <div className="w-1.5 h-1.5 bg-cyan-500" />}
+                        {isFailed && <XCircle className="w-3 h-3 text-white" />}
+                      </div>
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-white">
+                        {step.label}
+                      </span>
+                    </div>
+                    <span className="text-[8px] font-mono uppercase tracking-[0.2em] text-white/40">
+                      {isDone ? "[ Verified ]" : isActive ? "> Running" : "[ In Queue ]"}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
+          </div>
 
-            <div className="pt-2 border-t flex justify-center">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-muted-foreground hover:text-destructive"
-                onClick={() => cancelMutation.mutate({ jobId })}
-                disabled={cancelMutation.isPending}
-              >
-                <XCircle className="w-4 h-4 mr-2" />
-                {cancelMutation.isPending ? 'Cancelling...' : 'Cancel Scan'}
-              </Button>
+          {/* Activity Terminal (Raw style) */}
+          <div className="bg-black p-6 font-mono text-[9px] uppercase tracking-widest leading-relaxed">
+            <div className="flex items-center gap-3 mb-4 border-b border-white/5 pb-2 text-cyan-500/60">
+              <span className="animate-pulse">&gt;</span>
+              <span>Autonomous Activity Stream</span>
+            </div>
+            <div className="space-y-1.5 max-h-[140px] overflow-auto scrollbar-hide">
+              <p className="text-white/20 italic">[$] System initialized. Loading test suites...</p>
+              <p className="text-cyan-500/40">&gt; Spawning engine nodes (Chromium v130.x)</p>
+              <p className="text-white/30">&gt; Inspecting {status?.currentUrl || "Targets"}...</p>
+              {progress > 20 && <p className="text-emerald-500/50">&gt; SUCCESS: DOM snapshot captured</p>}
+              {progress > 50 && <p className="text-cyan-500/50">&gt; RUNNING: Cross-browser verification</p>}
+              {progress > 80 && <p className="text-amber-500/50">&gt; ANALYZING: Processing issue classifications</p>}
+              {status?.status === 'running' && <p className="text-white animate-pulse">_</p>}
             </div>
           </div>
         </CardContent>
       </Card>
+
+      <div className="mt-8 flex justify-center">
+        <button
+          className="px-6 py-2 border border-rose-500/30 text-rose-500/50 font-mono text-[10px] uppercase tracking-[0.3em] transition-all cyber-button-danger"
+          onClick={() => cancelMutation.mutate({ jobId })}
+          disabled={cancelMutation.isPending}
+        >
+          {cancelMutation.isPending ? '[ Aborting... ]' : '[ Abort Session ]'}
+        </button>
+      </div>
     </div>
   );
 }

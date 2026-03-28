@@ -1,0 +1,5 @@
+{
+  "url": "https://example.com",
+  "maxPages": 2,
+  "browsers": ["chromium"]
+}

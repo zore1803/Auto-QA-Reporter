@@ -1,0 +1,1214 @@
+{
+  "jobId": "730a87ff-0d52-41e1-9753-89e67e900e7a",
+  "targetUrl": "https://github.com/",
+  "scannedAt": "2026-03-28T09:14:34.886Z",
+  "totalPages": 25,
+  "scanDurationMs": 280910,
+  "summary": {
+    "totalBugs": 68,
+    "brokenLinks": 18,
+    "uiIssues": 33,
+    "formIssues": 16,
+    "journeyIssues": 1,
+    "healthScore": 0,
+    "severityCounts": {
+      "high": 24,
+      "medium": 21,
+      "low": 23
+    }
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://github.com/marketplace",
+      "statusCode": 400,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 400 for \"https://github.com/marketplace\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 400 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://www.gartner.com/reprints/?id=1-2LVTG7RP&ct=250915&st=sb",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 403 for \"https://www.gartner.com/reprints/?id=1-2LVTG7RP&ct=250915&st=sb\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 403 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://x.com/github",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 403 for \"https://x.com/github\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 403 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://www.twitch.tv/github",
+      "statusCode": 405,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 405 for \"https://www.twitch.tv/github\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 405 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "vscode://github.copilot-chat",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "fetch failed",
+      "impact": "The link \"vscode://github.copilot-chat\" could not be reached (fetch failed). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/features/models",
+      "linkUrl": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/features/codespaces",
+      "linkUrl": "https://github.com/settings/billing?locale=en-US",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://github.com/settings/billing?locale=en-US\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://docs.github.com",
+      "linkUrl": "https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://docs.github.com/en/copilot/tutorials/copilot-chat-cookbook\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/marketplace",
+      "linkUrl": "https://github.com/marketplace#start-of-content",
+      "statusCode": 400,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 400 for \"https://github.com/marketplace#start-of-content\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 400 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/features",
+      "linkUrl": "https://docs.github.com/en/enterprise-cloud@latest/code-security/securing-your-organization/fixing-security-alerts-at-scale&sa=D&source=docs&ust=1729524438944416&usg=AOvVaw2kubAWlMROH_emJPRJQNWU",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://docs.github.com/en/enterprise-cloud@latest/code-security/securing-your-organization/fixing-security-alerts-at-scale&sa=D&source=docs&ust=1729524438944416&usg=AOvVaw2kubAWlMROH_emJPRJQNWU\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Security Risk",
+      "aiConfidence": 0.9
+    },
+    {
+      "sourcePage": "https://github.com/enterprise",
+      "linkUrl": "https://github.com/marketplace?locale=en-US",
+      "statusCode": 400,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 400 for \"https://github.com/marketplace?locale=en-US\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 400 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/enterprise",
+      "linkUrl": "https://github.com/marketplace?type=&locale=en-US",
+      "statusCode": 400,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 400 for \"https://github.com/marketplace?type=&locale=en-US\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 400 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/solutions/use-case/app-modernization",
+      "linkUrl": "https://github.com/solutions/use-case/aka.ms/ghcp-appmod/blog",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://github.com/solutions/use-case/aka.ms/ghcp-appmod/blog\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/solutions/use-case/devops",
+      "linkUrl": "https://resources.github.com/devops/2024-gartner-mq-for-devops-platforms/",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://resources.github.com/devops/2024-gartner-mq-for-devops-platforms/\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://github.com/features/issues",
+      "linkUrl": "https://collector.github.com/github/collect",
+      "statusCode": 502,
+      "statusType": "Server Error",
+      "error": "Resource failed to load (ping)"
+    },
+    {
+      "sourcePage": "https://github.com/features/codespaces",
+      "linkUrl": "https://collector.github.com/github/collect",
+      "statusCode": 502,
+      "statusType": "Server Error",
+      "error": "Resource failed to load (ping)"
+    },
+    {
+      "sourcePage": "https://github.com/mcp",
+      "linkUrl": "https://collector.github.com/github/collect",
+      "statusCode": 502,
+      "statusType": "Server Error",
+      "error": "Resource failed to load (ping)"
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://github.com",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://github.githubassets.com/assets/particles-170bd1fd231f4669.png\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "section#automation > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 384,
+        "y": 2137.25634765625,
+        "width": 512,
+        "height": 622.484375
+      },
+      "occurrences": 17,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "occurrences": 2,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://github.com/login",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#icon-button-f16dcde9-2911-4da7-80ad-561f3a5f8a79",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/login",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 3 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > form > div:nth-of-type(2) > input:nth-of-type(10)",
+      "occurrences": 3,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://github.githubassets.com/assets/hero-bg-desktop-3043dc2aac662165.webp\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "section#hero > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)",
+      "boundingBox": {
+        "x": -170.57492065429688,
+        "y": 328.7068786621094,
+        "width": 1622.390625,
+        "height": 1192.453125
+      },
+      "occurrences": 15,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "occurrences": 2,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://images.ctfassets.net/8aevphvgewt8/1jwTWLD2LZwSC75CV6opvO/84b74fba4894778\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(5) > main > react-app > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > picture > img",
+      "boundingBox": {
+        "x": 0,
+        "y": 134,
+        "width": 1280,
+        "height": 1310.59375
+      },
+      "occurrences": 2,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "occurrences": 2,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://github.com/features/models",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://images.ctfassets.net/8aevphvgewt8/4vJTbcxVY2zW1h3iLlcFB6/5266bf25fa03bc5\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(5) > main > react-app > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > picture > img",
+      "boundingBox": {
+        "x": 0,
+        "y": 72,
+        "width": 1280,
+        "height": 1177.59375
+      },
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/models",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "occurrences": 2,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/models",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/models",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://github.com/mcp",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 3 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#icon-button-da8b5365-fa94-4980-9be3-40693d5fcb0d",
+      "occurrences": 5,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/mcp",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://github.com/features/actions",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "occurrences": 2,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/actions",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/actions",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 9 (src: \"https://images.ctfassets.net/8aevphvgewt8/58pD4rXB4Ydg0WgxuC3clC/a777e92c0ce0a4b\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(5) > main > react-app > div > div > div > section:nth-of-type(3) > div > div > div > div > div:nth-of-type(2) > figure > div:nth-of-type(2) > span > img",
+      "boundingBox": {
+        "x": 712,
+        "y": 6433.0625,
+        "width": 48,
+        "height": 48
+      },
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "occurrences": 2,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://github.com/features/issues",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "occurrences": 2,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/issues",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/issues",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://github.com/features/code-review",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "occurrences": 2,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/code-review",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://github.com/features/code-review",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    }
+  ],
+  "formIssues": [
+    {
+      "page": "https://github.com",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com",
+      "formSelector": "section#hero > div:nth-of-type(1) > div:nth-of-type(5) > div > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"section#hero > div:nth-of-type(1) > div:nth-of-type(5) > div > form\" has 2 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com",
+      "formSelector": "section#cta > div > section > div > div > div > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"section#cta > div > section > div > div > div > form\" has 2 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/login",
+      "formSelector": "html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > form",
+      "issueType": "Weak Password Policy",
+      "description": "The password field in form \"html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > form\" has no minlength attribute and accepted the trivially weak password \"123\".",
+      "impact": "Allowing short or simple passwords makes accounts trivially susceptible to brute-force attacks.",
+      "recommendation": "Enforce a minimum password length of at least 8 characters using the minlength attribute.",
+      "severity": "High",
+      "occurrences": 1,
+      "aiCategory": "Security Risk",
+      "aiConfidence": 0.9
+    },
+    {
+      "page": "https://github.com/login",
+      "formSelector": "html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > webauthn-status > form:nth-of-type(1)",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > webauthn-status > form:nth-of-type(1)\" has 13 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/login",
+      "formSelector": "html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > webauthn-status > div:nth-of-type(2) > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > webauthn-status > div:nth-of-type(2) > form\" has 13 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/login",
+      "formSelector": "html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > webauthn-status > form:nth-of-type(2)",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > webauthn-status > form:nth-of-type(2)\" has 2 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/login",
+      "formSelector": "html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > webauthn-status > form:nth-of-type(3)",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > webauthn-status > form:nth-of-type(3)\" has 2 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/features/models",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/mcp",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/features/actions",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/features/issues",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    },
+    {
+      "page": "https://github.com/features/code-review",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5
+    }
+  ],
+  "journeyIssues": [
+    {
+      "journeyType": "search",
+      "page": "https://github.com/login",
+      "severity": "Medium",
+      "issueType": "Search: Input Not Found",
+      "description": "Could not locate the search input field using standard selectors.",
+      "step": "Locate search input",
+      "recommendation": "Use <input type=\"search\"> or add name=\"q\" / role=\"searchbox\" to the search input.",
+      "selector": "form:nth-of-type(1)"
+    }
+  ],
+  "journeyResults": [
+    {
+      "journeyType": "search",
+      "page": "https://github.com",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://github.com",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/login",
+      "stepsCompleted": [
+        "Navigate to page"
+      ],
+      "issues": [
+        {
+          "journeyType": "search",
+          "page": "https://github.com/login",
+          "severity": "Medium",
+          "issueType": "Search: Input Not Found",
+          "description": "Could not locate the search input field using standard selectors.",
+          "step": "Locate search input",
+          "recommendation": "Use <input type=\"search\"> or add name=\"q\" / role=\"searchbox\" to the search input.",
+          "selector": "form:nth-of-type(1)"
+        }
+      ]
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/copilot",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://github.com/features/copilot",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/copilot",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/spark",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://github.com/features/spark",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/spark",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/models",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://github.com/features/models",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/models",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    }
+  ],
+  "pagesScanned": [
+    {
+      "url": "https://github.com",
+      "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_0_https___github_com.png",
+      "loadTimeMs": 6955,
+      "linksFound": 153,
+      "formsFound": 5
+    },
+    {
+      "url": "https://github.com/login",
+      "title": "Sign in to GitHub · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_1_https___github_com_login.png",
+      "loadTimeMs": 3265,
+      "linksFound": 10,
+      "formsFound": 5
+    },
+    {
+      "url": "https://github.com/features/copilot",
+      "title": "GitHub Copilot · Your AI pair programmer · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_2_https___github_com_features_copilot.png",
+      "loadTimeMs": 12809,
+      "linksFound": 208,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/spark",
+      "title": "GitHub Spark · Dream it. See it. Ship it. · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_3_https___github_com_features_spark.png",
+      "loadTimeMs": 3139,
+      "linksFound": 153,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/models",
+      "title": "GitHub Models · Build AI-powered projects with industry-leading · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_4_https___github_com_features_models.png",
+      "loadTimeMs": 3134,
+      "linksFound": 140,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/mcp",
+      "title": "MCP Registry · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_5_https___github_com_mcp.png",
+      "loadTimeMs": 3748,
+      "linksFound": 115,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/actions",
+      "title": "GitHub Actions · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_6_https___github_com_features_actions.png",
+      "loadTimeMs": 3101,
+      "linksFound": 142,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/codespaces",
+      "title": "GitHub Codespaces · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_7_https___github_com_features_codespaces.png",
+      "loadTimeMs": 3725,
+      "linksFound": 153,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/issues",
+      "title": "GitHub Issues · Project planning for developers · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_8_https___github_com_features_issues.png",
+      "loadTimeMs": 3350,
+      "linksFound": 142,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/code-review",
+      "title": "GitHub Code Review · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_9_https___github_com_features_code_review.png",
+      "loadTimeMs": 12709,
+      "linksFound": 146,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/security/advanced-security",
+      "title": "GitHub Advanced Security · Built-in protection for every repository · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_10_https___github_com_security_advanced_security.png",
+      "loadTimeMs": 10243,
+      "linksFound": 154,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/security/advanced-security/code-security",
+      "title": "GitHub Code Security · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_11_https___github_com_security_advanced_security_code_security.png",
+      "loadTimeMs": 7088,
+      "linksFound": 142,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/security/advanced-security/secret-protection",
+      "title": "GitHub Secret Protection · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_12_https___github_com_security_advanced_security_secret_protection.png",
+      "loadTimeMs": 7752,
+      "linksFound": 140,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/why-github",
+      "title": "GitHub · Why Choose GitHub? · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_13_https___github_com_why_github.png",
+      "loadTimeMs": 7176,
+      "linksFound": 142,
+      "formsFound": 3
+    },
+    {
+      "url": "https://docs.github.com",
+      "title": "GitHub Docs",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_14_https___docs_github_com.png",
+      "loadTimeMs": 4921,
+      "linksFound": 72,
+      "formsFound": 1
+    },
+    {
+      "url": "https://github.com/marketplace",
+      "title": "Marketplace · Tools to improve your workflow · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_15_https___github_com_marketplace.png",
+      "loadTimeMs": 7303,
+      "linksFound": 224,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features",
+      "title": "GitHub Features · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_16_https___github_com_features.png",
+      "loadTimeMs": 7709,
+      "linksFound": 203,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/enterprise",
+      "title": "GitHub Enterprise · The AI-powered developer platform for the agent-ready enterprise · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_17_https___github_com_enterprise.png",
+      "loadTimeMs": 15595,
+      "linksFound": 184,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/team",
+      "title": "GitHub for teams · Build like the best teams on the planet · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_18_https___github_com_team.png",
+      "loadTimeMs": 7653,
+      "linksFound": 149,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/enterprise/startups",
+      "title": "Build your startup on GitHub · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_19_https___github_com_enterprise_startups.png",
+      "loadTimeMs": 7704,
+      "linksFound": 138,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/solutions/industry/nonprofits",
+      "title": "GitHub for Nonprofits · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_20_https___github_com_solutions_industry_nonprofits.png",
+      "loadTimeMs": 15480,
+      "linksFound": 135,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/solutions/use-case/app-modernization",
+      "title": "App Modernization Solutions | GitHub · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_21_https___github_com_solutions_use_case_app_modernization.png",
+      "loadTimeMs": 1819,
+      "linksFound": 136,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/solutions/use-case/devsecops",
+      "title": "Unified DevSecOps Solutions Built for Security | GitHub · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_22_https___github_com_solutions_use_case_devsecops.png",
+      "loadTimeMs": 2377,
+      "linksFound": 139,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/solutions/use-case/devops",
+      "title": "Unified AI-Powered Platforms for DevOps Solutions | GitHub · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_23_https___github_com_solutions_use_case_devops.png",
+      "loadTimeMs": 1775,
+      "linksFound": 140,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/solutions/use-case/ci-cd",
+      "title": "A Complete CI/CD Solution for Software Development | GitHub · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "730a87ff-0d52-41e1-9753-89e67e900e7a_24_https___github_com_solutions_use_case_ci_cd.png",
+      "loadTimeMs": 1857,
+      "linksFound": 137,
+      "formsFound": 3
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ]
+}

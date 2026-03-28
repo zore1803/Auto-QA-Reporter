@@ -1,5 +1,6 @@
 import { Router, type IRouter, type Request, type Response } from 'express';
 import { randomUUID } from 'crypto';
+import { createClient } from '@supabase/supabase-js';
 import path from 'path';
 import fs from 'fs/promises';
 import { runScan, SCREENSHOTS_BASE_DIR, loadReportFromDisk } from '../qa/scan-engine.js';
@@ -10,6 +11,13 @@ import type { ScanJob, BrowserName } from '../qa/types.js';
 const router: IRouter = Router();
 const jobs = new Map<string, ScanJob>();
 const MAX_CONCURRENT_SCANS = 3;
+
+function getSupabase() {
+  const url = process.env['SUPABASE_URL'];
+  const key = process.env['SUPABASE_ANON_KEY'];
+  if (url && key) return createClient(url, key);
+  return null;
+}
 
 const VALID_BROWSERS: BrowserName[] = ['chromium', 'firefox', 'webkit'];
 
@@ -27,12 +35,14 @@ router.post('/scan', async (req: Request, res: Response) => {
     maxPages = 20,
     enableAI = false,
     browsers,
+    device,
     runJourneys = false,
   } = req.body as {
     url?: string;
     maxPages?: number;
     enableAI?: boolean;
     browsers?: string[];
+    device?: string;
     runJourneys?: boolean;
   };
 
@@ -70,6 +80,7 @@ router.post('/scan', async (req: Request, res: Response) => {
     maxPages: Math.min(Math.max(Number(maxPages) || 20, 1), 50),
     enableAI: Boolean(enableAI),
     browsers: selectedBrowsers,
+    device,
     runJourneys: Boolean(runJourneys),
     status: 'pending',
     progress: 0,
@@ -89,7 +100,7 @@ router.post('/scan', async (req: Request, res: Response) => {
 });
 
 router.delete('/scan/:jobId', (req: Request, res: Response) => {
-  const job = jobs.get(req.params['jobId']!);
+  const job = jobs.get(req.params.jobId as string);
   if (!job) {
     res.status(404).json({ error: 'Job not found' });
     return;
@@ -110,7 +121,7 @@ router.delete('/scan/:jobId', (req: Request, res: Response) => {
 });
 
 router.get('/scan/:jobId/status', (req: Request, res: Response) => {
-  const job = jobs.get(req.params['jobId']!);
+  const job = jobs.get(req.params.jobId as string);
   if (!job) {
     res.status(404).json({ error: 'Job not found' });
     return;
@@ -126,12 +137,13 @@ router.get('/scan/:jobId/status', (req: Request, res: Response) => {
     startedAt: job.startedAt,
     completedAt: job.completedAt,
     browsers: job.browsers,
+    device: job.device,
     runJourneys: job.runJourneys,
   });
 });
 
 router.get('/scan/:jobId/report', async (req: Request, res: Response) => {
-  const jobId = req.params['jobId']!;
+  const jobId = req.params.jobId as string;
   const job = jobs.get(jobId);
   if (job) {
     if (job.status !== 'completed' || !job.report) {
@@ -141,6 +153,16 @@ router.get('/scan/:jobId/report', async (req: Request, res: Response) => {
     res.json(job.report);
     return;
   }
+  
+  const sb = getSupabase();
+  if (sb) {
+     const { data } = await sb.from('scans').select('full_report').eq('job_id', jobId).single();
+     if (data?.full_report) {
+       res.json(data.full_report);
+       return;
+     }
+  }
+
   const diskReport = await loadReportFromDisk(jobId);
   if (diskReport) {
     res.json(diskReport);
@@ -149,17 +171,34 @@ router.get('/scan/:jobId/report', async (req: Request, res: Response) => {
   res.status(404).json({ error: 'Job not found' });
 });
 
-// List past scans from disk
+// List past scans from disk or DB
 router.get('/scans/history', async (_req: Request, res: Response) => {
   try {
-    const entries = await fs.readdir(SCREENSHOTS_BASE_DIR).catch(() => [] as string[]);
-    const scans: Array<{
+    let scans: Array<{
       jobId: string;
       targetUrl: string;
       scannedAt: string;
       totalBugs: number;
       healthScore: number;
     }> = [];
+
+    const sb = getSupabase();
+    if (sb) {
+       const { data } = await sb.from('scans').select('job_id, target_url, scanned_at, summary').order('scanned_at', { ascending: false });
+       if (data && data.length > 0) {
+         scans = data.map(d => ({
+            jobId: d.job_id,
+            targetUrl: d.target_url,
+            scannedAt: d.scanned_at,
+            totalBugs: (d.summary as any)?.totalBugs ?? 0,
+            healthScore: (d.summary as any)?.healthScore ?? 0,
+         }));
+         res.json({ scans });
+         return;
+       }
+    }
+
+    const entries = await fs.readdir(SCREENSHOTS_BASE_DIR).catch(() => [] as string[]);
 
     for (const entry of entries) {
       try {
@@ -186,7 +225,7 @@ router.get('/scans/history', async (_req: Request, res: Response) => {
 });
 
 router.get('/scan/:jobId/screenshots', async (req: Request, res: Response) => {
-  const jobId = req.params['jobId']!;
+  const jobId = req.params.jobId as string;
   const job = jobs.get(jobId);
   const report = job?.report ?? (await loadReportFromDisk(jobId));
   const screenshotsDir = path.join(SCREENSHOTS_BASE_DIR, jobId);
@@ -211,7 +250,7 @@ router.get('/scan/:jobId/screenshots', async (req: Request, res: Response) => {
 });
 
 router.get('/scan/:jobId/export/html', async (req: Request, res: Response) => {
-  const jobId = req.params['jobId']!;
+  const jobId = req.params.jobId as string;
   const report = jobs.get(jobId)?.report ?? (await loadReportFromDisk(jobId));
   if (!report) {
     res.status(404).json({ error: 'Report not found' });
@@ -224,7 +263,7 @@ router.get('/scan/:jobId/export/html', async (req: Request, res: Response) => {
 });
 
 router.get('/scan/:jobId/export/pdf', async (req: Request, res: Response) => {
-  const jobId = req.params['jobId']!;
+  const jobId = req.params.jobId as string;
   const report = jobs.get(jobId)?.report ?? (await loadReportFromDisk(jobId));
   if (!report) {
     res.status(404).json({ error: 'Report not found' });
@@ -243,7 +282,7 @@ router.get('/scan/:jobId/export/pdf', async (req: Request, res: Response) => {
 });
 
 router.get('/screenshots/:filename', async (req: Request, res: Response) => {
-  const filename = decodeURIComponent(req.params['filename']!);
+  const filename = decodeURIComponent(req.params.filename as string);
   if (filename.includes('..') || filename.includes('/')) {
     res.status(400).json({ error: 'Invalid filename' });
     return;

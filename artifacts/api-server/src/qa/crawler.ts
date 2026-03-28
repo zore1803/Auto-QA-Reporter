@@ -1,4 +1,4 @@
-import { chromium, type Browser, type Page } from 'playwright';
+import { chromium, devices, type Browser, type Page } from 'playwright';
 import path from 'path';
 import fs from 'fs/promises';
 import type { PageScanned } from './types.js';
@@ -7,6 +7,7 @@ import { playwrightEnv } from './playwright-env.js';
 export interface CrawlResult {
   pages: PageScanned[];
   allLinks: Array<{ sourcePage: string; linkUrl: string }>;
+  brokenResources: Array<{ url: string; status: number; type: string; source: string }>;
 }
 
 function sanitizeFilename(url: string): string {
@@ -17,7 +18,13 @@ function isSameDomain(base: string, link: string): boolean {
   try {
     const baseUrl = new URL(base);
     const linkUrl = new URL(link);
-    return baseUrl.hostname === linkUrl.hostname;
+    
+    // Normalize hostnames (remove www.)
+    const baseHost = baseUrl.hostname.replace(/^www\./, '');
+    const linkHost = linkUrl.hostname.replace(/^www\./, '');
+    
+    // Allow if they are the same base domain or one is a subdomain of the other
+    return linkHost === baseHost || linkHost.endsWith('.' + baseHost);
   } catch {
     return false;
   }
@@ -38,13 +45,15 @@ export async function crawlSite(
   maxPages: number,
   jobId: string,
   screenshotsDir: string,
-  onProgress: (currentUrl: string) => void
+  device: string | undefined,
+  onProgress: (currentUrl: string, progress: number) => void
 ): Promise<CrawlResult> {
   let browser: Browser | null = null;
   const pages: PageScanned[] = [];
   const allLinks: Array<{ sourcePage: string; linkUrl: string }> = [];
   const visited = new Set<string>();
   const toVisit: string[] = [normalizeUrl(targetUrl)];
+  const brokenResources: Array<{ url: string; status: number; type: string; source: string }> = [];
 
   await fs.mkdir(screenshotsDir, { recursive: true });
 
@@ -53,10 +62,11 @@ export async function crawlSite(
       headless: true,
       env: playwrightEnv(),
     });
-    const context = await browser.newContext({
-      userAgent: 'Mozilla/5.0 (compatible; AutonomousQAInspector/1.0)',
-      viewport: { width: 1280, height: 800 },
-    });
+    const deviceConfig = device && devices[device] 
+      ? { ...devices[device], deviceScaleFactor: 1 } 
+      : { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 };
+
+    const context = await browser.newContext(deviceConfig);
 
     // Inject __name shim to prevent esbuild-injected helper errors in browser context
     await context.addInitScript(() => {
@@ -64,32 +74,50 @@ export async function crawlSite(
       window.__name = (f, n) => f;
     });
 
+
     let pageIndex = 0;
 
     while (toVisit.length > 0 && pages.length < maxPages) {
-      const batchSize = Math.min(10, maxPages - pages.length, toVisit.length);
+      // Filter out already visited URLs before picking batch
+      const unvisitedToVisit = toVisit.filter(u => !visited.has(u));
+      toVisit.length = 0;
+      toVisit.push(...unvisitedToVisit);
+
+      if (toVisit.length === 0) break;
+
+      const batchSize = Math.min(5, maxPages - pages.length, toVisit.length);
       const batchUrls = toVisit.splice(0, batchSize);
       
       const batchPromises = batchUrls.map(async (currentUrl, i) => {
         if (visited.has(currentUrl)) return null;
         visited.add(currentUrl);
 
-        onProgress(currentUrl);
+        const currentProgress = 5 + Math.floor((pages.length / maxPages) * 20);
+        onProgress(currentUrl, currentProgress);
         const page: Page = await context.newPage();
         const startTime = Date.now();
         const currentIndex = pageIndex + i; // Pre-allocate index for this batch item
 
         try {
+          // Track resource failures for this specific page
+          page.on('response', (res) => {
+            const status = res.status();
+            if (status >= 400 && res.request().resourceType() !== 'document') {
+              brokenResources.push({
+                url: res.url(),
+                status,
+                type: res.request().resourceType(),
+                source: currentUrl
+              });
+            }
+          });
+
           const response = await page.goto(currentUrl, {
             waitUntil: 'domcontentloaded',
-            timeout: 20000,
+            timeout: 7000,
           });
           
-          try {
-            await page.waitForLoadState('networkidle', { timeout: 10000 });
-          } catch {
-            // ignore networkidle timeout, proceed
-          }
+          // no networkidle wait here, discovery phase only
 
           const loadTimeMs = Date.now() - startTime;
           const statusCode = response?.status() ?? 0;
@@ -98,10 +126,14 @@ export async function crawlSite(
           const screenshotFile = `${jobId}_${currentIndex}_${sanitizeFilename(currentUrl)}.png`;
           const screenshotPath = path.join(screenshotsDir, screenshotFile);
 
-          try {
-            await page.screenshot({ path: screenshotPath, fullPage: true });
-          } catch {
-            // screenshot failed, continue
+          if (currentIndex < 3) {
+            try {
+              await page.screenshot({ path: screenshotPath, fullPage: false });
+            } catch {
+              // screenshot failed, continue
+            }
+          } else {
+            // Skip secondary screenshots to maximize speed
           }
 
           const links = await page.evaluate(() => {
@@ -143,6 +175,18 @@ export async function crawlSite(
 
       const batchResults = await Promise.all(batchPromises);
 
+      // SPA Fallback: If the initial target URL returned a 404, try adding the root URL to the queue
+      if (pages.length === 0 && batchResults.length > 0) {
+        const first = batchResults[0];
+        if (first && first.statusCode === 404 && first.currentUrl === normalizeUrl(targetUrl)) {
+          const rootUrl = new URL('/', targetUrl).toString();
+          const normalizedRoot = normalizeUrl(rootUrl);
+          if (!visited.has(normalizedRoot) && !toVisit.includes(normalizedRoot)) {
+            toVisit.push(normalizedRoot);
+          }
+        }
+      }
+
       for (const result of batchResults) {
         if (!result) continue; // skipped visitation
 
@@ -181,5 +225,5 @@ export async function crawlSite(
     if (browser) await browser.close();
   }
 
-  return { pages, allLinks };
+  return { pages, allLinks, brokenResources };
 }

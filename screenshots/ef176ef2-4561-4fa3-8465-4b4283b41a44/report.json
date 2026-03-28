@@ -1,0 +1,65 @@
+{
+  "jobId": "ef176ef2-4561-4fa3-8465-4b4283b41a44",
+  "targetUrl": "https://claude.ai/new",
+  "scannedAt": "2026-03-28T09:21:05.223Z",
+  "totalPages": 1,
+  "scanDurationMs": 39313,
+  "summary": {
+    "totalBugs": 2,
+    "brokenLinks": 1,
+    "uiIssues": 1,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 95,
+    "severityCounts": {
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    }
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://claude.ai/new",
+      "linkUrl": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/pat/9e359013d94b4451/1774689667466/f30b34275a30ba8f370f3746b978c59b69bec21905099a4fe55cfe4ba27a3360/DkuUx2IVuNs-o15",
+      "statusCode": 401,
+      "statusType": "Client Error",
+      "error": "Resource failed to load (fetch)"
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://claude.ai/new",
+      "severity": "Low",
+      "issueType": "Missing Meta Description",
+      "description": "This page has no <meta name=\"description\"> tag (or the content is empty).",
+      "impact": "Search engines often display the meta description as the snippet text in search results. Without it, Google generates its own excerpt, which may reduce click-through rate.",
+      "recommendation": "Add <meta name=\"description\" content=\"...\"> inside <head> with a concise summary (ideally 150–160 characters).",
+      "selector": "head",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Minor Styling",
+      "aiConfidence": 0.65
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://claude.ai/new",
+      "title": "Just a moment...",
+      "statusCode": 403,
+      "screenshotFile": "ef176ef2-4561-4fa3-8465-4b4283b41a44_0_https___claude_ai_new.png",
+      "loadTimeMs": 10811,
+      "linksFound": 2,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium",
+    "firefox"
+  ]
+}

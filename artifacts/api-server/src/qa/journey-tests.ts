@@ -1,4 +1,4 @@
-import { chromium } from 'playwright';
+import { chromium, devices } from 'playwright';
 import type { JourneyIssue, JourneyResult, Severity } from './types.js';
 import { playwrightEnv } from './playwright-env.js';
 import { resolveLocator, resolveSubmitButton } from './locator-resolver.js';
@@ -11,17 +11,20 @@ interface DetectedJourney {
   signals: string[];
 }
 
-async function detectJourneys(url: string): Promise<DetectedJourney[]> {
+async function detectJourneys(url: string, device?: string): Promise<DetectedJourney[]> {
   const { chromium: c } = await import('playwright');
   let browser = null;
   const detected: DetectedJourney[] = [];
 
   try {
     browser = await c.launch({ headless: true, env: playwrightEnv() });
-    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const deviceConfig = device && devices[device] 
+      ? { ...devices[device], deviceScaleFactor: 1 } 
+      : { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 };
+    const context = await browser.newContext(deviceConfig);
     const page = await context.newPage();
 
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 7000 });
 
     const forms = await page.evaluate(() => {
       return Array.from(document.querySelectorAll('form')).map((form, i) => {
@@ -97,7 +100,8 @@ async function detectJourneys(url: string): Promise<DetectedJourney[]> {
 
 async function testLoginJourney(
   url: string,
-  formSelector: string
+  formSelector: string,
+  device?: string
 ): Promise<JourneyResult> {
   const issues: JourneyIssue[] = [];
   const stepsCompleted: string[] = [];
@@ -105,9 +109,12 @@ async function testLoginJourney(
   let browser = null;
   try {
     browser = await chromium.launch({ headless: true, env: playwrightEnv() });
-    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const deviceConfig = device && devices[device] 
+      ? { ...devices[device], deviceScaleFactor: 1 } 
+      : { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 };
+    const context = await browser.newContext(deviceConfig);
     const page = await context.newPage();
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 7000 });
     stepsCompleted.push('Navigate to page');
 
     // Check form exists
@@ -217,7 +224,8 @@ async function testLoginJourney(
 
 async function testSignupJourney(
   url: string,
-  formSelector: string
+  formSelector: string,
+  device?: string
 ): Promise<JourneyResult> {
   const issues: JourneyIssue[] = [];
   const stepsCompleted: string[] = [];
@@ -225,9 +233,12 @@ async function testSignupJourney(
   let browser = null;
   try {
     browser = await chromium.launch({ headless: true, env: playwrightEnv() });
-    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const deviceConfig = device && devices[device] 
+      ? { ...devices[device], deviceScaleFactor: 1 } 
+      : { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 };
+    const context = await browser.newContext(deviceConfig);
     const page = await context.newPage();
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 7000 });
     stepsCompleted.push('Navigate to page');
 
     const form = await resolveLocator(page, formSelector, { role: 'form' });
@@ -316,7 +327,8 @@ async function testSignupJourney(
 
 async function testSearchJourney(
   url: string,
-  formSelector: string
+  formSelector: string,
+  device?: string
 ): Promise<JourneyResult> {
   const issues: JourneyIssue[] = [];
   const stepsCompleted: string[] = [];
@@ -324,9 +336,12 @@ async function testSearchJourney(
   let browser = null;
   try {
     browser = await chromium.launch({ headless: true, env: playwrightEnv() });
-    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const deviceConfig = device && devices[device] 
+      ? { ...devices[device], deviceScaleFactor: 1 } 
+      : { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 };
+    const context = await browser.newContext(deviceConfig);
     const page = await context.newPage();
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 7000 });
     stepsCompleted.push('Navigate to page');
 
     const searchInput = await resolveLocator(
@@ -402,7 +417,8 @@ async function testSearchJourney(
 
 async function testContactJourney(
   url: string,
-  formSelector: string
+  formSelector: string,
+  device?: string
 ): Promise<JourneyResult> {
   const issues: JourneyIssue[] = [];
   const stepsCompleted: string[] = [];
@@ -410,9 +426,12 @@ async function testContactJourney(
   let browser = null;
   try {
     browser = await chromium.launch({ headless: true, env: playwrightEnv() });
-    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const deviceConfig = device && devices[device] 
+      ? { ...devices[device], deviceScaleFactor: 1 } 
+      : { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 };
+    const context = await browser.newContext(deviceConfig);
     const page = await context.newPage();
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 7000 });
     stepsCompleted.push('Navigate to page');
 
     const form = await resolveLocator(page, formSelector, { role: 'form' });
@@ -479,7 +498,8 @@ async function testContactJourney(
 
 async function testCheckoutJourney(
   url: string,
-  formSelector: string
+  formSelector: string,
+  device?: string
 ): Promise<JourneyResult> {
   const issues: JourneyIssue[] = [];
   const stepsCompleted: string[] = [];
@@ -487,9 +507,12 @@ async function testCheckoutJourney(
   let browser = null;
   try {
     browser = await chromium.launch({ headless: true, env: playwrightEnv() });
-    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const deviceConfig = device && devices[device] 
+      ? { ...devices[device], deviceScaleFactor: 1 } 
+      : { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 };
+    const context = await browser.newContext(deviceConfig);
     const page = await context.newPage();
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 7000 });
     stepsCompleted.push('Navigate to page');
 
     // Check for add-to-cart or checkout buttons
@@ -563,14 +586,15 @@ async function testCheckoutJourney(
  * Returns results per journey and a flat list of all issues found.
  */
 export async function runJourneyTests(
-  pages: Array<{ url: string }>
+  pages: Array<{ url: string }>,
+  device?: string
 ): Promise<{ results: JourneyResult[]; issues: JourneyIssue[] }> {
   const allResults: JourneyResult[] = [];
 
   for (const { url } of pages.slice(0, 5)) {
     let detected: DetectedJourney[] = [];
     try {
-      detected = await detectJourneys(url);
+      detected = await detectJourneys(url, device);
     } catch {
       continue;
     }
@@ -579,19 +603,19 @@ export async function runJourneyTests(
       let result: JourneyResult;
       switch (journey.type) {
         case 'login':
-          result = await testLoginJourney(url, journey.formSelector);
+          result = await testLoginJourney(url, journey.formSelector, device);
           break;
         case 'signup':
-          result = await testSignupJourney(url, journey.formSelector);
+          result = await testSignupJourney(url, journey.formSelector, device);
           break;
         case 'search':
-          result = await testSearchJourney(url, journey.formSelector);
+          result = await testSearchJourney(url, journey.formSelector, device);
           break;
         case 'contact':
-          result = await testContactJourney(url, journey.formSelector);
+          result = await testContactJourney(url, journey.formSelector, device);
           break;
         case 'checkout':
-          result = await testCheckoutJourney(url, journey.formSelector);
+          result = await testCheckoutJourney(url, journey.formSelector, device);
           break;
         default:
           continue;

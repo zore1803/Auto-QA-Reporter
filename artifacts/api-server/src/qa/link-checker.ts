@@ -73,8 +73,8 @@ export async function checkLinks(
     }
   }
 
-  const uniqueLinks = Array.from(linksByUrl.values());
-  const batchSize = 10;
+  const uniqueLinks = Array.from(linksByUrl.values()).slice(0, 150); // cap at 150 links max
+  const batchSize = 25; // run 25 concurrent checks
 
   for (let i = 0; i < uniqueLinks.length; i += batchSize) {
     const batch = uniqueLinks.slice(i, i + batchSize);
@@ -85,20 +85,13 @@ export async function checkLinks(
 
         try {
           const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 8000);
+          const timeoutId = setTimeout(() => controller.abort(), 4000); // reduced from 8s to 4s
 
           const res = await fetch(linkUrl, {
-            method: 'HEAD',
+            method: 'GET',
             signal: controller.signal,
             headers: { 'User-Agent': 'Mozilla/5.0 (compatible; AutonomousQAInspector/1.0)' },
             redirect: 'follow',
-          }).catch(async () => {
-            return fetch(linkUrl, {
-              method: 'GET',
-              signal: controller.signal,
-              headers: { 'User-Agent': 'Mozilla/5.0 (compatible; AutonomousQAInspector/1.0)' },
-              redirect: 'follow',
-            });
           });
 
           clearTimeout(timeoutId);

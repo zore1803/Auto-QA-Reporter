@@ -1,4 +1,5 @@
 import path from 'path';
+import { createClient } from '@supabase/supabase-js';
 import fs from 'fs/promises';
 import { crawlSite } from './crawler.js';
 import { checkLinks } from './link-checker.js';
@@ -15,7 +16,7 @@ import {
 } from './bug-grouping.js';
 import { findBaselineScan, compareWithBaseline } from './baseline-compare.js';
 import { annotatePageScreenshots } from './screenshot-annotator.js';
-import type { ScanJob, ScanReport, ScanStep } from './types.js';
+import type { ScanJob, ScanReport, ScanStep, BrokenLink, UIIssue } from './types.js';
 
 export const SCREENSHOTS_BASE_DIR = path.join(process.cwd(), '..', '..', 'screenshots');
 
@@ -67,89 +68,84 @@ export async function runScan(job: ScanJob): Promise<void> {
     job.currentStep = 'Crawling Pages';
     job.progress = 5;
 
-    const { pages, allLinks } = await crawlSite(
+    const { pages, allLinks, brokenResources } = await crawlSite(
       job.url,
       job.maxPages,
       job.jobId,
       screenshotsDir,
-      (currentUrl) => { job.currentUrl = currentUrl; }
+      job.device,
+      (currentUrl, progress) => { 
+        job.currentUrl = currentUrl;
+        job.progress = Math.max(job.progress, progress);
+      }
     );
 
     setStepStatus(job, 'crawl', 'completed');
     job.progress = 20;
     if (job.cancelled) return;
 
-    // ── Step 2: Link Checking ──────────────────────────────────────────
-    setStepStatus(job, 'links', 'running');
-    job.currentStep = 'Checking Links';
-    job.currentUrl = undefined;
+    // ── Step 2-5: Parallel Inspection ──────────────────────────────────
+    job.currentStep = 'Performing comprehensive inspection...';
+    
+    const [brokenLinksResult, uiIssuesResult, formIssuesResult, journeyData] = await Promise.all([
+      // 1. Link Checking
+      (async () => {
+        setStepStatus(job, 'links', 'running');
+        let bl = await checkLinks(allLinks);
+        bl = deduplicateBrokenLinks(bl);
+        setStepStatus(job, 'links', 'completed');
+        return bl;
+      })(),
 
-    let brokenLinks = await checkLinks(allLinks);
-    brokenLinks = deduplicateBrokenLinks(brokenLinks);
+      // 2. UI Inspection
+      (async () => {
+        setStepStatus(job, 'ui', 'running');
+        const pagesToInspect = pages.slice(0, Math.min(pages.length, 3));
+        let ui = multiBrowser && !job.device
+          ? await runMultiBrowserInspection(pagesToInspect, job.browsers)
+          : await inspectUI(pagesToInspect, job.device);
+        ui = deduplicateUIIssues(ui);
+        setStepStatus(job, 'ui', 'completed');
+        return ui;
+      })(),
 
-    setStepStatus(job, 'links', 'completed');
-    job.progress = 38;
+      // 3. Form Testing
+      (async () => {
+        setStepStatus(job, 'forms', 'running');
+        const pagesToInspect = pages.slice(0, Math.min(pages.length, 3));
+        const pagesWithForms = pagesToInspect.filter((p) => (p.formsFound || 0) > 0);
+        let forms = await testForms(
+          pagesWithForms.length > 0 ? pagesWithForms : pagesToInspect.slice(0, 3),
+          job.device
+        );
+        forms = deduplicateFormIssues(forms);
+        setStepStatus(job, 'forms', 'completed');
+        return forms;
+      })(),
+
+      // 4. Journey Testing (optional)
+      (async () => {
+        if (!job.runJourneys) return { results: [], issues: [] };
+        setStepStatus(job, 'journeys', 'running');
+        const pagesToInspect = pages.slice(0, Math.min(pages.length, 3));
+        const data = await runJourneyTests(pagesToInspect, job.device);
+        setStepStatus(job, 'journeys', 'completed');
+        return data;
+      })()
+    ]);
+
+    let brokenLinks = brokenLinksResult;
+    let uiIssues = uiIssuesResult;
+    let formIssues = formIssuesResult;
+    let journeyResults = journeyData.results;
+    let journeyIssues = journeyData.issues;
+
+    job.progress = 80;
     if (job.cancelled) return;
 
-    // ── Step 3: UI Inspection (single or multi-browser) ────────────────
-    setStepStatus(job, 'ui', 'running');
-    job.currentStep = multiBrowser ? 'Cross-Browser UI Inspection' : 'UI Inspection';
-
-    const pagesToInspect = pages.slice(0, Math.min(pages.length, 10));
-    console.log(`[scan-engine] UI Inspection starting for ${pagesToInspect.length} pages, multiBrowser=${multiBrowser}`);
-
-    let uiIssues = multiBrowser
-      ? await runMultiBrowserInspection(pagesToInspect, job.browsers)
-      : await inspectUI(pagesToInspect);
-
-    console.log(`[scan-engine] UI Inspection completed: ${uiIssues.length} issues found`);
-    uiIssues = deduplicateUIIssues(uiIssues);
-
-    setStepStatus(job, 'ui', 'completed');
-    job.progress = 58;
+    // ── Annotate screenshots with red boxes (non-blocking) ──────────────
+    annotatePageScreenshots(pages, uiIssues, formIssues, screenshotsDir).catch(() => {});
     if (job.cancelled) return;
-
-    // ── Step 4: Form Testing ───────────────────────────────────────────
-    setStepStatus(job, 'forms', 'running');
-    job.currentStep = 'Form Testing';
-
-    const pagesWithForms = pagesToInspect.filter((p) => (p.formsFound || 0) > 0);
-    console.log(`[scan-engine] Form Testing starting: ${pagesWithForms.length} pages with forms, fallback=${pagesWithForms.length === 0}`);
-    let formIssues = await testForms(
-      pagesWithForms.length > 0 ? pagesWithForms : pagesToInspect.slice(0, 5)
-    );
-    console.log(`[scan-engine] Form Testing completed: ${formIssues.length} issues found`);
-    formIssues = deduplicateFormIssues(formIssues);
-
-    setStepStatus(job, 'forms', 'completed');
-    job.progress = 72;
-    if (job.cancelled) return;
-
-    // ── Annotate screenshots with red boxes for every detected issue ────
-    // (runs after both UI + form inspection so all issues are captured)
-    try {
-      await annotatePageScreenshots(pages, uiIssues, formIssues, screenshotsDir);
-    } catch {
-      // Non-fatal — scan continues even if annotation fails
-    }
-    if (job.cancelled) return;
-
-    // ── Step 5: Journey Testing (optional) ────────────────────────────
-    let journeyIssues: import('./types.js').JourneyIssue[] = [];
-    let journeyResults: import('./types.js').JourneyResult[] = [];
-
-    if (job.runJourneys) {
-      setStepStatus(job, 'journeys', 'running');
-      job.currentStep = 'User Journey Testing';
-
-      const { results, issues } = await runJourneyTests(pagesToInspect);
-      journeyResults = results;
-      journeyIssues = issues;
-
-      setStepStatus(job, 'journeys', 'completed');
-      job.progress = 82;
-      if (job.cancelled) return;
-    }
 
     // ── Step 6: AI Classification + Report Generation ──────────────────
     setStepStatus(job, 'report', 'running');
@@ -210,18 +206,28 @@ export async function runScan(job: ScanJob): Promise<void> {
 
     const scanDurationMs = Date.now() - startTime;
 
+    // Map broken resources to broken links for simplicity in report
+    const resourceBrokenLinks: BrokenLink[] = brokenResources.map(r => ({
+      sourcePage: r.source,
+      linkUrl: r.url,
+      statusCode: r.status,
+      statusType: r.status >= 500 ? 'Server Error' : (r.status === 404 ? 'Not Found' : 'Client Error'),
+      error: `Resource failed to load (${r.type})`
+    }));
+
     const report = buildReport({
       jobId: job.jobId,
       targetUrl: job.url,
       scannedAt: new Date(job.startedAt).toISOString(),
       scanDurationMs,
-      brokenLinks,
+      brokenLinks: [...brokenLinks, ...resourceBrokenLinks],
       uiIssues,
       formIssues,
       journeyIssues,
       journeyResults,
       pagesScanned: pages,
       browsers: job.browsers,
+      device: job.device,
       previousJobId,
       newCount,
       fixedCount,
@@ -241,6 +247,92 @@ export async function runScan(job: ScanJob): Promise<void> {
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2), 'utf-8');
     } catch {
       // Non-fatal
+    }
+
+    // Save to Supabase
+    const supabaseUrl = process.env['SUPABASE_URL'];
+    const supabaseKey = process.env['SUPABASE_ANON_KEY'];
+    
+    if (supabaseUrl && supabaseKey) {
+      const supabase = createClient(supabaseUrl, supabaseKey);
+      
+      const scanToInsert = {
+        job_id: job.jobId,
+        target_url: job.url,
+        scanned_at: new Date(job.startedAt).toISOString(),
+        total_pages: pages.length,
+        scan_duration_ms: scanDurationMs,
+        summary: report.summary,
+        browsers: job.browsers,
+        previous_job_id: previousJobId,
+        status: 'completed',
+        full_report: report
+      };
+      
+      try {
+        const { error: scanError } = await supabase.from('scans').upsert(scanToInsert);
+        if (scanError) console.error("Supabase scan insert error:", scanError);
+        
+        const issuesToInsert = [];
+        
+        for (const link of report.brokenLinks) {
+          issuesToInsert.push({
+            job_id: job.jobId,
+            issue_category: 'broken_link',
+            page_url: link.sourcePage,
+            severity: 'High',
+            issue_type: link.statusType,
+            description: `Broken link to ${link.linkUrl} (${link.statusCode})`,
+            ai_category: link.aiCategory || null,
+            ai_confidence: link.aiConfidence || null,
+            issue_status: link.issueStatus || null,
+            occurrences: link.occurrences || 1,
+            details: link
+          });
+        }
+        
+        for (const ui of report.uiIssues) {
+          issuesToInsert.push({
+            job_id: job.jobId,
+            issue_category: 'ui_issue',
+            page_url: ui.page,
+            severity: ui.severity,
+            issue_type: ui.issueType,
+            description: ui.description,
+            ai_category: ui.aiCategory || null,
+            ai_confidence: ui.aiConfidence || null,
+            issue_status: ui.issueStatus || null,
+            occurrences: ui.occurrences || 1,
+            details: ui
+          });
+        }
+        
+        for (const form of report.formIssues) {
+          issuesToInsert.push({
+            job_id: job.jobId,
+            issue_category: 'form_issue',
+            page_url: form.page,
+            severity: form.severity,
+            issue_type: form.issueType,
+            description: form.description,
+            ai_category: form.aiCategory || null,
+            ai_confidence: form.aiConfidence || null,
+            issue_status: form.issueStatus || null,
+            occurrences: form.occurrences || 1,
+            details: form
+          });
+        }
+
+        if (issuesToInsert.length > 0) {
+          for (let i = 0; i < issuesToInsert.length; i += 100) {
+              const chunk = issuesToInsert.slice(i, i + 100);
+              const { error: issueError } = await supabase.from('scan_issues').insert(chunk);
+              if (issueError) console.error("Supabase issue insert error:", issueError);
+          }
+        }
+      } catch(sbErr) {
+        console.error("Supabase saving failed:", sbErr);
+      }
     }
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);

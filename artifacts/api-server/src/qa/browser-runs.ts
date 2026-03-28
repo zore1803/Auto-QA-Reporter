@@ -39,10 +39,28 @@ async function inspectInBrowser(
       try {
         await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
         try { await page.waitForLoadState('networkidle', { timeout: 10000 }); } catch {}
+        
+        // Capture console errors
+        const consoleErrors: UIIssue[] = [];
+        page.on('console', msg => {
+          if (msg.type() === 'error') {
+            consoleErrors.push({
+              page: url,
+              severity: 'High',
+              issueType: 'Console Error',
+              description: `JS Error (${browserName}): ${msg.text()}`,
+              impact: 'Javascript errors can break critical site functionality and user interactions.',
+              recommendation: 'Check the browser console and source code to resolve this exception.',
+              browsers: [browserName]
+            });
+          }
+        });
+
         const pageIssues = await runPageUIChecks(page, url);
         for (const issue of pageIssues) {
           issues.push({ ...issue, browsers: [browserName] });
         }
+        issues.push(...consoleErrors);
       } catch {
         // Skip failed pages
       } finally {

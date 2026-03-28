@@ -1,0 +1,117 @@
+{
+  "jobId": "d37ed605-5d84-456d-a433-fcde9d454632",
+  "targetUrl": "https://www.makemytrip.com/",
+  "scannedAt": "2026-03-28T05:44:37.941Z",
+  "totalPages": 1,
+  "scanDurationMs": 11275,
+  "summary": {
+    "totalBugs": 4,
+    "brokenLinks": 0,
+    "uiIssues": 4,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 68,
+    "severityCounts": {
+      "high": 2,
+      "medium": 2,
+      "low": 0
+    }
+  },
+  "brokenLinks": [],
+  "uiIssues": [
+    {
+      "page": "https://www.makemytrip.com",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 5 (src: \"https://promos.makemytrip.com/notification/xhdpi/Roadblock-386x540-LongWeekend-A\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "div#header-container > div:nth-of-type(2) > div:nth-of-type(2) > div > div > div > div > img",
+      "boundingBox": {
+        "x": 192,
+        "y": 130,
+        "width": 386,
+        "height": 540
+      },
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.makemytrip.com",
+      "severity": "Medium",
+      "issueType": "Empty Link",
+      "description": "Link 1 (href: \"none\") has no visible text and no aria-label.",
+      "impact": "Screen readers read this link as \"link\" with no destination hint. Search engines treat anchor text as a relevance signal — an empty link passes no keyword value.",
+      "recommendation": "Provide descriptive anchor text or an aria-label that describes the destination. Avoid generic text like \"click here\".",
+      "selector": "div#header-container > div:nth-of-type(1) > a",
+      "boundingBox": {
+        "x": 40,
+        "y": 7,
+        "width": 121.43333435058594,
+        "height": 38
+      },
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.makemytrip.com",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 1 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "div#header-container > div:nth-of-type(2) > div:nth-of-type(2) > div > section > form > input:nth-of-type(1)",
+      "boundingBox": {
+        "x": -9422,
+        "y": -9882.5,
+        "width": 184.6666717529297,
+        "height": 44
+      },
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85
+    },
+    {
+      "page": "https://www.makemytrip.com",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: input and input at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://www.makemytrip.com",
+      "title": "Error: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.makemytrip.com/\nCall log:\n\u001b[2m  - navigating",
+      "statusCode": 0,
+      "loadTimeMs": 123,
+      "linksFound": 0,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium",
+    "firefox"
+  ]
+}

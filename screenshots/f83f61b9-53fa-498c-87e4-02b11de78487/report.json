@@ -1,0 +1,1518 @@
+{
+  "jobId": "f83f61b9-53fa-498c-87e4-02b11de78487",
+  "targetUrl": "https://github.com/",
+  "scannedAt": "2026-03-28T09:23:08.030Z",
+  "totalPages": 10,
+  "scanDurationMs": 292304,
+  "summary": {
+    "totalBugs": 85,
+    "brokenLinks": 39,
+    "uiIssues": 33,
+    "formIssues": 12,
+    "journeyIssues": 1,
+    "healthScore": 0,
+    "severityCounts": {
+      "high": 22,
+      "medium": 44,
+      "low": 19
+    },
+    "newIssues": 34,
+    "fixedIssues": 15,
+    "repeatedIssues": 50
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://github.com/marketplace",
+      "statusCode": 400,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 400 for \"https://github.com/marketplace\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 400 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://github.com/enterprise/startups",
+      "statusCode": 502,
+      "statusType": "Server Error",
+      "impact": "The server at \"https://github.com/enterprise/startups\" returned a 502 (server error). This indicates the target server is experiencing an internal failure. Users are unable to access this resource and may lose confidence in the site.",
+      "recommendation": "If this is an internal link, investigate the server-side logs for the failing endpoint and fix the underlying error. If it is an external link, check whether the third-party site is experiencing downtime and consider removing or replacing the link until it recovers.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://www.gartner.com/reprints/?id=1-2LVTG7RP&ct=250915&st=sb",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 403 for \"https://www.gartner.com/reprints/?id=1-2LVTG7RP&ct=250915&st=sb\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 403 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://support.github.com/?tags=dotcom-footer",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://support.github.com/?tags=dotcom-footer\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://github.careers/",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.careers/\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://shop.github.com/",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://shop.github.com/\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://docs.github.com/site-policy/github-terms/github-terms-of-service",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://docs.github.com/site-policy/github-terms/github-terms-of-service\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://docs.github.com/site-policy/privacy-policies/github-privacy-statement\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://github.com/github/site-policy/pull/582",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/github/site-policy/pull/582\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://github.com/sitemap",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/sitemap\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://github.com/git-guides",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/git-guides\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://www.linkedin.com/company/github",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://www.linkedin.com/company/github\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://www.instagram.com/github",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://www.instagram.com/github\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://www.youtube.com/github",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://www.youtube.com/github\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://x.com/github",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://x.com/github\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://www.tiktok.com/@github",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://www.tiktok.com/@github\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://www.twitch.tv/github",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://www.twitch.tv/github\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com",
+      "linkUrl": "https://github.com/github",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/github\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/login",
+      "linkUrl": "https://github.com/login#start-of-content",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/login#start-of-content\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/login",
+      "linkUrl": "https://github.com/password_reset",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/password_reset\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Security Risk",
+      "aiConfidence": 0.9,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/login",
+      "linkUrl": "https://github.com/signup?source=login",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/signup?source=login\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot#start-of-content",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot#start-of-content\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Ffeatures%2Fcopilot",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Ffeatures%2Fcopilot\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Ffeatures%2Fcopilot&source=header",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Ffeatures%2Fcopilot&source=header\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "http://github.com/features/ai?locale=en-US",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"http://github.com/features/ai?locale=en-US\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot?locale=en-US",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot?locale=en-US\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "vscode://github.copilot-chat",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "fetch failed",
+      "impact": "The link \"vscode://github.copilot-chat\" could not be reached (fetch failed). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot/ai-code-editor?locale=en-US",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot/ai-code-editor?locale=en-US\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot/agents?locale=en-US",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot/agents?locale=en-US\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot/cli?locale=en-US",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot/cli?locale=en-US\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot/copilot-business?locale=en-US",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot/copilot-business?locale=en-US\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot/tutorials?locale=en-US",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot/tutorials?locale=en-US\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot/plans?locale=en-US",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot/plans?locale=en-US\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot/plans?cft=copilot_lo.features_copilot",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot/plans?cft=copilot_lo.features_copilot\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot/ai-code-editor",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot/ai-code-editor\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://github.com/features/copilot/agents",
+      "statusCode": 0,
+      "statusType": "Timeout/Error",
+      "error": "Timeout after 8 seconds",
+      "impact": "The link \"https://github.com/features/copilot/agents\" could not be reached (Timeout after 8 seconds). Users who click it will see a browser error message, destroying trust and potentially losing them as visitors. If this is an internal link, it may signal a downed server or misconfigured DNS.",
+      "recommendation": "Verify the URL is correct and the target server is online. Check for DNS resolution failures, firewall rules blocking the destination, or SSL certificate errors. If the resource is permanently gone, remove the link.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "new"
+    },
+    {
+      "sourcePage": "https://github.com/features/copilot",
+      "linkUrl": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://github.com/features/models",
+      "linkUrl": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "repeated"
+    },
+    {
+      "sourcePage": "https://github.com/features/codespaces",
+      "linkUrl": "https://github.com/settings/billing?locale=en-US",
+      "statusCode": 404,
+      "statusType": "Not Found",
+      "impact": "Users who follow this link land on a 404 error page — a dead end that breaks their journey through the site. Search engines that crawl this link waste their crawl budget and may reduce their trust in the site, lowering SEO rankings for pages that link to it.",
+      "recommendation": "Remove or update the hyperlink pointing to \"https://github.com/settings/billing?locale=en-US\". If the target page has moved, replace the URL with the correct destination or set up a 301 redirect from the old URL. Regularly audit outbound links with a link checker.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8,
+      "issueStatus": "repeated"
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://github.com",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://github.githubassets.com/assets/particles-170bd1fd231f4669.png\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "section#automation > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > img",
+      "boundingBox": {
+        "x": 384,
+        "y": 2137.25634765625,
+        "width": 512,
+        "height": 622.484375
+      },
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/login",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 1 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#icon-button-506ebc52-fe1c-4db2-9eca-54622e145a17",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/login",
+      "severity": "High",
+      "issueType": "Missing Form Label",
+      "description": "Input field 3 (type=\"text\") has no associated <label>, aria-label, or aria-labelledby attribute.",
+      "impact": "Screen readers cannot tell users what to type into this field. This is a WCAG 2.1 Level A violation (Success Criterion 1.3.1 and 3.3.2).",
+      "recommendation": "Add a <label for=\"inputId\"> element whose for attribute matches the input's id. If a visible label is not desired, use aria-label on the input itself.",
+      "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > form > div:nth-of-type(2) > input:nth-of-type(10)",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://images.ctfassets.net/8aevphvgewt8/1jwTWLD2LZwSC75CV6opvO/84b74fba4894778\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(5) > main > react-app > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > picture > img",
+      "boundingBox": {
+        "x": 0,
+        "y": 134,
+        "width": 1280,
+        "height": 1310.59375
+      },
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/models",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://images.ctfassets.net/8aevphvgewt8/4vJTbcxVY2zW1h3iLlcFB6/5266bf25fa03bc5\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(5) > main > react-app > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > picture > img",
+      "boundingBox": {
+        "x": 0,
+        "y": 72,
+        "width": 1280,
+        "height": 1177.59375
+      },
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/models",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/models",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/models",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/mcp",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 3 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#icon-button-f25de474-5cee-4180-a7e1-b5ad9e57d4ef",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/mcp",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/actions",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/actions",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/actions",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 9 (src: \"https://images.ctfassets.net/8aevphvgewt8/58pD4rXB4Ydg0WgxuC3clC/a777e92c0ce0a4b\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "html > body > div:nth-of-type(1) > div:nth-of-type(5) > main > react-app > div > div > div > section:nth-of-type(3) > div > div > div > div > div:nth-of-type(2) > figure > div:nth-of-type(2) > span > img",
+      "boundingBox": {
+        "x": 712,
+        "y": 6433.0625,
+        "width": 48,
+        "height": 48
+      },
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/issues",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/issues",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/issues",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/code-review",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/code-review",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/code-review",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "chromium",
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "severity": "Medium",
+      "issueType": "Missing Alt Text",
+      "description": "Image 1 (src: \"https://github.githubassets.com/assets/hero-bg-desktop-3043dc2aac662165.webp\") has no alt attribute or an empty one.",
+      "impact": "Screen readers announce this image as \"image\" with no context, making it meaningless to visually-impaired users. Search engines also use alt text to index images, so missing alt text reduces SEO value.",
+      "recommendation": "Add a descriptive alt attribute that conveys the purpose or content of the image. For purely decorative images use alt=\"\" (empty string) to tell screen readers to skip it.",
+      "selector": "section#hero > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > img:nth-of-type(1)",
+      "boundingBox": {
+        "x": -170.5833282470703,
+        "y": 328.7166748046875,
+        "width": 1622.4000244140625,
+        "height": 1192.4666748046875
+      },
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "severity": "High",
+      "issueType": "Empty Button",
+      "description": "Button 9 has no visible text and no aria-label attribute.",
+      "impact": "Keyboard-only and screen-reader users cannot determine what this button does. Automated accessibility audits will flag this as a WCAG 2.1 Level A failure (Success Criterion 4.1.2).",
+      "recommendation": "Add meaningful text inside the button element, or add an aria-label attribute. If the button only contains an icon, pair it with a visually-hidden <span> or use aria-label.",
+      "selector": "button#query-builder-test-clear-button",
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "severity": "Low",
+      "issueType": "Heading Hierarchy Skip",
+      "description": "Heading level jumps from H1 to H3. Heading text: \"Explore\"",
+      "impact": "Screen readers use heading structure to let users navigate the page by section. Skipping levels confuses this outline and breaks WCAG 2.1 Success Criterion 1.3.1.",
+      "recommendation": "Change the H3 to an H2 so the outline is sequential.",
+      "selector": "ul#query-builder-test-results > li > h3",
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "Accessibility Issue",
+      "aiConfidence": 0.85,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "browsers": [
+        "firefox"
+      ],
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75,
+      "issueStatus": "repeated"
+    }
+  ],
+  "formIssues": [
+    {
+      "page": "https://github.com",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com",
+      "formSelector": "section#hero > div:nth-of-type(1) > div:nth-of-type(4) > div > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"section#hero > div:nth-of-type(1) > div:nth-of-type(4) > div > form\" has 2 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "new"
+    },
+    {
+      "page": "https://github.com",
+      "formSelector": "section#cta > div > section > div > div > div > form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"section#cta > div > section > div > div > div > form\" has 2 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/login",
+      "formSelector": "html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > form",
+      "issueType": "Weak Password Policy",
+      "description": "The password field in form \"html > body > div:nth-of-type(1) > div:nth-of-type(4) > main > div > div:nth-of-type(2) > form\" has no minlength attribute and accepted the trivially weak password \"123\".",
+      "impact": "Allowing short or simple passwords makes accounts trivially susceptible to brute-force attacks.",
+      "recommendation": "Enforce a minimum password length of at least 8 characters using the minlength attribute.",
+      "severity": "High",
+      "occurrences": 1,
+      "aiCategory": "Security Risk",
+      "aiConfidence": 0.9,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/copilot",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/spark",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/models",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/mcp",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/actions",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/codespaces",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/issues",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    },
+    {
+      "page": "https://github.com/features/code-review",
+      "formSelector": "form#code-search-feedback-form",
+      "issueType": "No Required Fields Marked",
+      "description": "Form \"form#code-search-feedback-form\" has 3 input fields but none are marked as required.",
+      "impact": "Users have no visual indication of which fields must be filled.",
+      "recommendation": "Add the required attribute to all mandatory inputs.",
+      "severity": "Low",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.5,
+      "issueStatus": "repeated"
+    }
+  ],
+  "journeyIssues": [
+    {
+      "journeyType": "search",
+      "page": "https://github.com/login",
+      "severity": "Medium",
+      "issueType": "Search: Input Not Found",
+      "description": "Could not locate the search input field using standard selectors.",
+      "step": "Locate search input",
+      "recommendation": "Use <input type=\"search\"> or add name=\"q\" / role=\"searchbox\" to the search input.",
+      "selector": "form:nth-of-type(1)"
+    }
+  ],
+  "journeyResults": [
+    {
+      "journeyType": "search",
+      "page": "https://github.com",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://github.com",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/login",
+      "stepsCompleted": [
+        "Navigate to page"
+      ],
+      "issues": [
+        {
+          "journeyType": "search",
+          "page": "https://github.com/login",
+          "severity": "Medium",
+          "issueType": "Search: Input Not Found",
+          "description": "Could not locate the search input field using standard selectors.",
+          "step": "Locate search input",
+          "recommendation": "Use <input type=\"search\"> or add name=\"q\" / role=\"searchbox\" to the search input.",
+          "selector": "form:nth-of-type(1)"
+        }
+      ]
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/copilot",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://github.com/features/copilot",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/copilot",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/spark",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://github.com/features/spark",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/spark",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/models",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "contact",
+      "page": "https://github.com/features/models",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate contact form",
+        "Submit empty form"
+      ],
+      "issues": []
+    },
+    {
+      "journeyType": "search",
+      "page": "https://github.com/features/models",
+      "stepsCompleted": [
+        "Navigate to page",
+        "Locate search input",
+        "Enter search query",
+        "Submit search"
+      ],
+      "issues": []
+    }
+  ],
+  "pagesScanned": [
+    {
+      "url": "https://github.com",
+      "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_0_https___github_com.png",
+      "loadTimeMs": 7838,
+      "linksFound": 153,
+      "formsFound": 5
+    },
+    {
+      "url": "https://github.com/login",
+      "title": "Sign in to GitHub · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_1_https___github_com_login.png",
+      "loadTimeMs": 2919,
+      "linksFound": 10,
+      "formsFound": 5
+    },
+    {
+      "url": "https://github.com/features/copilot",
+      "title": "GitHub Copilot · Your AI pair programmer · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_2_https___github_com_features_copilot.png",
+      "loadTimeMs": 16719,
+      "linksFound": 208,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/spark",
+      "title": "GitHub Spark · Dream it. See it. Ship it. · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_3_https___github_com_features_spark.png",
+      "loadTimeMs": 3137,
+      "linksFound": 153,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/models",
+      "title": "GitHub Models · Build AI-powered projects with industry-leading · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_4_https___github_com_features_models.png",
+      "loadTimeMs": 3340,
+      "linksFound": 140,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/mcp",
+      "title": "MCP Registry · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_5_https___github_com_mcp.png",
+      "loadTimeMs": 3943,
+      "linksFound": 115,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/actions",
+      "title": "GitHub Actions · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_6_https___github_com_features_actions.png",
+      "loadTimeMs": 15838,
+      "linksFound": 142,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/codespaces",
+      "title": "GitHub Codespaces · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_7_https___github_com_features_codespaces.png",
+      "loadTimeMs": 3867,
+      "linksFound": 153,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/issues",
+      "title": "GitHub Issues · Project planning for developers · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_8_https___github_com_features_issues.png",
+      "loadTimeMs": 3859,
+      "linksFound": 142,
+      "formsFound": 3
+    },
+    {
+      "url": "https://github.com/features/code-review",
+      "title": "GitHub Code Review · GitHub",
+      "statusCode": 200,
+      "screenshotFile": "f83f61b9-53fa-498c-87e4-02b11de78487_9_https___github_com_features_code_review.png",
+      "loadTimeMs": 3841,
+      "linksFound": 146,
+      "formsFound": 3
+    }
+  ],
+  "browsers": [
+    "chromium",
+    "firefox"
+  ],
+  "previousJobId": "730a87ff-0d52-41e1-9753-89e67e900e7a"
+}

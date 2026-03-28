@@ -1,0 +1,344 @@
+{
+  "jobId": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb",
+  "targetUrl": "https://antigravity.google/",
+  "scannedAt": "2026-03-28T07:17:25.843Z",
+  "totalPages": 20,
+  "scanDurationMs": 47697,
+  "summary": {
+    "totalBugs": 12,
+    "brokenLinks": 2,
+    "uiIssues": 10,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 0,
+    "severityCounts": {
+      "high": 10,
+      "medium": 2,
+      "low": 0
+    }
+  },
+  "brokenLinks": [
+    {
+      "sourcePage": "https://antigravity.google/changelog",
+      "linkUrl": "https://x.com/antigravity",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 403 for \"https://x.com/antigravity\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 403 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    },
+    {
+      "sourcePage": "https://antigravity.google/changelog",
+      "linkUrl": "https://x.com/antigravity/status/2027435365275967591",
+      "statusCode": 403,
+      "statusType": "Client Error",
+      "impact": "The server returned HTTP 403 for \"https://x.com/antigravity/status/2027435365275967591\". This is a client-side error — the request was understood but refused. Possible causes: authentication required (401), forbidden resource (403), or method not allowed (405).",
+      "recommendation": "Inspect why the server is rejecting the request. If the link requires authentication, ensure it is only shown to authenticated users. If the resource is forbidden, update the link to an accessible alternative. HTTP 403 responses from crawled links can also waste crawl budget.",
+      "occurrences": 1,
+      "aiCategory": "Functional Bug",
+      "aiConfidence": 0.8
+    }
+  ],
+  "uiIssues": [
+    {
+      "page": "https://antigravity.google",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://antigravity.google/use-cases",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://antigravity.google/use-cases/professional",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://antigravity.google/use-cases/frontend",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://antigravity.google/use-cases/fullstack",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://antigravity.google/docs",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://antigravity.google/changelog",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://antigravity.google/support",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://antigravity.google/press",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    },
+    {
+      "page": "https://antigravity.google/releases",
+      "severity": "High",
+      "issueType": "Overlapping Interactive Elements",
+      "description": "Two interactive elements overlap: button and button at 1280×800.",
+      "impact": "When clickable elements overlap, users may accidentally trigger the wrong action. On touchscreens the problem is amplified.",
+      "recommendation": "Use browser DevTools to identify the overlapping elements and fix their positioning (check z-index, absolute/fixed positioning, or negative margins).",
+      "occurrences": 1,
+      "aiCategory": "UX Bug",
+      "aiConfidence": 0.75
+    }
+  ],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://antigravity.google",
+      "title": "Google Antigravity",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_0_https___antigravity_google.png",
+      "loadTimeMs": 5838,
+      "linksFound": 32,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/use-cases",
+      "title": "Google Antigravity Use Cases",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_1_https___antigravity_google_use_cases.png",
+      "loadTimeMs": 2588,
+      "linksFound": 27,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/use-cases/professional",
+      "title": "Google Antigravity - Use Case: Why professional developers choose Google Antigravity",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_2_https___antigravity_google_use_cases_professional.png",
+      "loadTimeMs": 10765,
+      "linksFound": 25,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/use-cases/frontend",
+      "title": "Google Antigravity - Use Case: Why frontend developers choose Google Antigravity",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_3_https___antigravity_google_use_cases_frontend.png",
+      "loadTimeMs": 10853,
+      "linksFound": 25,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/use-cases/fullstack",
+      "title": "Google Antigravity - Use Case: Why fullstack developers choose Google Antigravity",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_4_https___antigravity_google_use_cases_fullstack.png",
+      "loadTimeMs": 10844,
+      "linksFound": 25,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/docs",
+      "title": "Google Antigravity Documentation",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_5_https___antigravity_google_docs.png",
+      "loadTimeMs": 2298,
+      "linksFound": 56,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/changelog",
+      "title": "Google Antigravity Changelog",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_6_https___antigravity_google_changelog.png",
+      "loadTimeMs": 1700,
+      "linksFound": 29,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/support",
+      "title": "Google Antigravity Support",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_7_https___antigravity_google_support.png",
+      "loadTimeMs": 2403,
+      "linksFound": 27,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/press",
+      "title": "Google Antigravity Press Assets",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_8_https___antigravity_google_press.png",
+      "loadTimeMs": 2078,
+      "linksFound": 30,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/releases",
+      "title": "Google Antigravity - Releases",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_9_https___antigravity_google_releases.png",
+      "loadTimeMs": 1981,
+      "linksFound": 31,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/product",
+      "title": "Google Antigravity Product",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_10_https___antigravity_google_product.png",
+      "loadTimeMs": 3939,
+      "linksFound": 26,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/blog/gemini-3-1-pro-in-google-antigravity",
+      "title": "Google Antigravity Blog: gemini-3-1-pro-in-google-antigravity",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_11_https___antigravity_google_blog_gemini_3_1_pro_in_google_antigravity.png",
+      "loadTimeMs": 1827,
+      "linksFound": 30,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/blog/gemini-3-flash-in-google-antigravity",
+      "title": "Google Antigravity Blog: gemini-3-flash-in-google-antigravity",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_12_https___antigravity_google_blog_gemini_3_flash_in_google_antigravity.png",
+      "loadTimeMs": 3765,
+      "linksFound": 28,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/blog/nano-banana-pro-in-google-antigravity",
+      "title": "Google Antigravity Blog: nano-banana-pro-in-google-antigravity",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_13_https___antigravity_google_blog_nano_banana_pro_in_google_antigravity.png",
+      "loadTimeMs": 2422,
+      "linksFound": 26,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/blog/introducing-google-antigravity",
+      "title": "Google Antigravity Blog: introducing-google-antigravity",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_14_https___antigravity_google_blog_introducing_google_antigravity.png",
+      "loadTimeMs": 2378,
+      "linksFound": 30,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/download",
+      "title": "Google Antigravity Download",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_15_https___antigravity_google_download.png",
+      "loadTimeMs": 908,
+      "linksFound": 30,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/blog",
+      "title": "Google Antigravity Blog",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_16_https___antigravity_google_blog.png",
+      "loadTimeMs": 6693,
+      "linksFound": 24,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/pricing",
+      "title": "Google Antigravity Pricing",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_17_https___antigravity_google_pricing.png",
+      "loadTimeMs": 1085,
+      "linksFound": 30,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/terms",
+      "title": "Google Antigravity - Terms of Service",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_18_https___antigravity_google_terms.png",
+      "loadTimeMs": 1643,
+      "linksFound": 29,
+      "formsFound": 0
+    },
+    {
+      "url": "https://antigravity.google/docs/home",
+      "title": "Google Antigravity Documentation",
+      "statusCode": 200,
+      "screenshotFile": "0dc9cb35-1808-405f-a0a8-4ed1af3985cb_19_https___antigravity_google_docs_home.png",
+      "loadTimeMs": 1509,
+      "linksFound": 53,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ]
+}

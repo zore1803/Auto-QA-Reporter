@@ -1,0 +1,42 @@
+{
+  "jobId": "87cdb10e-ac86-4f61-820a-2a9cfabb612d",
+  "targetUrl": "https://www.makemytrip.com/",
+  "scannedAt": "2026-03-28T07:15:37.300Z",
+  "totalPages": 1,
+  "scanDurationMs": 2709,
+  "summary": {
+    "totalBugs": 0,
+    "brokenLinks": 0,
+    "uiIssues": 0,
+    "formIssues": 0,
+    "journeyIssues": 0,
+    "healthScore": 100,
+    "severityCounts": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "newIssues": 0,
+    "fixedIssues": 4,
+    "repeatedIssues": 0
+  },
+  "brokenLinks": [],
+  "uiIssues": [],
+  "formIssues": [],
+  "journeyIssues": [],
+  "journeyResults": [],
+  "pagesScanned": [
+    {
+      "url": "https://www.makemytrip.com",
+      "title": "Error: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.makemytrip.com/\nCall log:\n\u001b[2m  - navigating",
+      "statusCode": 0,
+      "loadTimeMs": 280,
+      "linksFound": 0,
+      "formsFound": 0
+    }
+  ],
+  "browsers": [
+    "chromium"
+  ],
+  "previousJobId": "d37ed605-5d84-456d-a433-fcde9d454632"
+}
